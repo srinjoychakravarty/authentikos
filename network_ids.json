@@ -1,0 +1,390 @@
+[
+  {
+    "name": "Ethereum",
+    "project": "Ethereum",
+    "type": "mainnet",
+    "networkId": "0x1",
+    "rpcUrl": "https://api.mycryptoapi.com/eth"
+  },
+  {
+    "name": "Expanse",
+    "project": "Ethereum",
+    "type": "testnet",
+    "networkId": "0x1",
+    "chainId": "0x2",
+    "rpcUrl": "https://node.expanse.tech"
+  },
+  {
+    "name": "Ubiq",
+    "type": "mainnet",
+    "networkId": "0x1",
+    "chainId": "0x8",
+    "rpcUrl": "https://pyrus2.ubiqscan.io"
+  },
+  {
+    "name": "Ethereum Classic",
+    "project": "Ethereum Classic",
+    "type": "mainnet",
+    "networkId": "0x1",
+    "chainId": "0x3d",
+    "rpcUrl": "https://ethereumclassic.network"
+  },
+  {
+    "name": "EtherInc",
+    "type": "mainnet",
+    "networkId": "0x1",
+    "chainId": "0x65",
+    "rpcUrl": "https://api.einc.io/jsonrpc/mainnet"
+  },
+  {
+    "name": "Callisto",
+    "type": "mainnet",
+    "networkId": "0x1",
+    "chainId": "0x334",
+    "rpcUrl": "https://clo-geth.0xinfra.com"
+  },
+  {
+    "name": "Teslafunds",
+    "type": "mainnet",
+    "networkId": "0x1",
+    "chainId": "0x740",
+    "rpcUrl": "https://tsfapi.europool.me"
+  },
+  {
+    "name": "Ethersocial",
+    "type": "mainnet",
+    "networkId": "0x1",
+    "chainId": "0x797e",
+    "rpcUrl": "https://api.esn.gonspool.com"
+  },
+  {
+    "name": "Morden",
+    "project": "Ethereum Classic",
+    "type": "testnet",
+    "networkId": "0x2",
+    "chainId": "0x3e"
+  },
+  {
+    "name": "Ubiq",
+    "type": "testnet",
+    "networkId": "0x2",
+    "chainId": "0x9"
+  },
+  {
+    "name": "Callisto",
+    "type": "testnet",
+    "networkId": "0x2",
+    "chainId": "0x335"
+  },
+  {
+    "name": "Ropsten",
+    "project": "Ethereum",
+    "type": "testnet",
+    "networkId": "0x3",
+    "chainId": "0x3"
+  },
+  {
+    "name": "Rinkeby",
+    "project": "Ethereum",
+    "type": "testnet",
+    "networkId": "0x4",
+    "chainId": "0x4"
+  },
+  {
+    "name": "Görli",
+    "project": "Ethereum",
+    "type": "testnet",
+    "networkId": "0x5",
+    "chainId": "0x5",
+    "rpcUrl": "https://rpc.goerli.mudit.blog/"
+  },
+  {
+    "name": "Kotti",
+    "project": "Ethereum Classic",
+    "type": "testnet",
+    "networkId": "0x6",
+    "chainId": "0x6"
+  },
+  {
+    "name": "Mordor",
+    "project": "Ethereum Classic",
+    "type": "testnet",
+    "networkId": "0x7",
+    "chainId": "0x3f"
+  },
+  {
+    "name": "Metadium",
+    "type": "mainnet",
+    "networkId": "0xb",
+    "rpcUrl": "https://api.metadium.com/prod"
+  },
+  {
+    "name": "Metadium",
+    "type": "testnet",
+    "networkId": "0xc",
+    "rpcUrl": "https://api.metadium.com/dev"
+  },
+  {
+    "name": "Development Chain",
+    "project": "Parity",
+    "type": "testnet",
+    "networkId": "0x11"
+  },
+  {
+    "name": "ThunderCore",
+    "type": "testnet",
+    "networkId": "0x12",
+    "rpcUrl": "https://testnet-rpc.thundercore.com"
+  },
+  {
+    "name": "L14",
+    "project": "LUKSO.network",
+    "type": "testnet",
+    "networkId": "0x16",
+    "explorerUrl": "http://l14.lukso.network"
+  },
+  {
+    "name": "RSK",
+    "type": "mainnet",
+    "networkId": "0x1e",
+    "rpcUrl": "https://public-node.rsk.co"
+  },
+  {
+    "name": "RSK",
+    "type": "testnet",
+    "networkId": "0x1f",
+    "rpcUrl": "https://public-node.testnet.rsk.co"
+  },
+  {
+    "name": "Kovan",
+    "project": "Ethereum",
+    "type": "testnet",
+    "networkId": "0x2a"
+  },
+  {
+    "name": "GoChain",
+    "type": "mainnet",
+    "networkId": "0x3c",
+    "rpcUrl": "https://rpc.gochain.io"
+  },
+  {
+    "name": "Ellaism",
+    "type": "mainnet",
+    "networkId": "0x40",
+    "rpcUrl": "https://jsonrpc.ellaism.org"
+  },
+  {
+    "name": "Mix",
+    "type": "mainnet",
+    "networkId": "0x4c",
+    "rpcUrl": "https://rpc2.mix-blockchain.org:8647"
+  },
+  {
+    "name": "Sokol",
+    "project": "POA.network",
+    "type": "testnet",
+    "networkId": "0x4d",
+    "rpcUrl": "https://sokol.poa.network"
+  },
+  {
+    "name": "TomoChain",
+    "type": "mainnet",
+    "networkId": "0x58",
+    "rpcUrl": "https://core.tomocoin.io"
+  },
+  {
+    "name": "Core",
+    "project": "POA.network",
+    "type": "mainnet",
+    "networkId": "0x63",
+    "rpcUrl": "https://core.poa.network"
+  },
+  {
+    "name": "xDai",
+    "project": "xDai",
+    "type": "mainnet",
+    "networkId": "0x64",
+    "rpcUrl": "https://dai.poa.network"
+  },
+  {
+    "name": "High Performance Blockchain",
+    "type": "mainnet",
+    "networkId": "0x64",
+    "chainId": "0x10d",
+    "rpcUrl": "https://node.hpb.blue"
+  },
+  {
+    "name": "ThunderCore",
+    "type": "mainnet",
+    "networkId": "0x6c",
+    "rpcUrl": "https://mainnet-rpc.thundercore.com"
+  },
+  {
+    "name": "Lightstreams",
+    "type": "testnet",
+    "networkId": "0xa2",
+    "rpcUrl": "https://node.sirius.lightstreams.io"
+  },
+  {
+    "name": "Lightstreams",
+    "type": "mainnet",
+    "networkId": "0xa3",
+    "rpcUrl": "https://node.mainnet.lightstreams.io"
+  },
+  {
+    "name": "Energy Web Chain",
+    "project": "Energy Web Foundation",
+    "type": "mainnet",
+    "networkId": "0xf6",
+    "rpcUrl": "https://rpc.energyweb.org"
+  },
+  {
+    "name": "Lisinski",
+    "type": "mainnet",
+    "networkId": "0x181",
+    "rpcUrl": "https://rpc-bitfalls1.lisinski.online"
+  },
+  {
+    "name": "Nepal Blockchain",
+    "type": "mainnet",
+    "networkId": "0x3d1",
+    "rpcUrl": "https://api.nepalblockchain.dev"
+  },
+  {
+    "name": "EtherGem",
+    "type": "mainnet",
+    "networkId": "0x7c3",
+    "rpcUrl": "https://jsonrpc.egem.io/custom"
+  },
+  {
+    "name": "Duero",
+    "project": "Ocean Protocol",
+    "type": "testnet",
+    "networkId": "0x897",
+    "rpcUrl": "https://duero.dev-ocean.com",
+    "explorerUrl": "https://submarine.duero.dev-ocean.com"
+  },
+  {
+    "name": "Nile",
+    "project": "Ocean Protocol",
+    "type": "testnet",
+    "networkId": "0x2323",
+    "rpcUrl": "https://nile.dev-ocean.com",
+    "explorerUrl": "https://submarine.nile.dev-ocean.com"
+  },
+  {
+    "name": "Spree",
+    "project": "Ocean Protocol",
+    "type": "testnet",
+    "networkId": "0x2324"
+  },
+  {
+    "name": "Webchain",
+    "type": "mainnet",
+    "networkId": "0x9109",
+    "chainId": "0x5fa4",
+    "rpcUrl": "https://node1.webchain.network"
+  },
+  {
+    "name": "Volta",
+    "project": "Energy Web Foundation",
+    "type": "testnet",
+    "networkId": "0x12047",
+    "rpcUrl": "https://volta-rpc.energyweb.org"
+  },
+  {
+    "name": "Akaroma",
+    "type": "mainnet",
+    "networkId": "0x30fb1",
+    "rpcUrl": "https://remote.akroma.io"
+  },
+  {
+    "name": "ARTIS sigma1",
+    "project": "lab10 collective",
+    "type": "mainnet",
+    "networkId": "0x3c301",
+    "chainId": "0x3c301"
+  },
+  {
+    "name": "ARTIS tau1",
+    "project": "lab10 collective",
+    "type": "testnet",
+    "networkId": "0x3c401",
+    "chainId": "0x3c401"
+  },
+  {
+    "name": "Pacific",
+    "project": "Ocean Protocol",
+    "type": "mainnet",
+    "networkId": "0xCEA11",
+    "rpcUrl": "https://pacific.oceanprotocol.com",
+    "explorerUrl": "https://submarine.oceanprotocol.com"
+  },
+  {
+    "name": "Ether-1",
+    "type": "mainnet",
+    "networkId": "0x14095a",
+    "rpcUrl": "https://rpc.ether1.org"
+  },
+  {
+    "name": "Xerom",
+    "type": "mainnet",
+    "networkId": "0x140adc",
+    "rpcUrl": "https://rpc.xerom.org"
+  },
+  {
+    "name": "Musicoin",
+    "type": "mainnet",
+    "networkId": "0x76740F",
+    "rpcUrl": "https://mewapi.musicoin.tw"
+  },
+  {
+    "name": "Atheios",
+    "type": "mainnet",
+    "networkId": "0xab71e5",
+    "chainId": "0x654",
+    "rpcUrl": "https://wallet.atheios.com:8797"
+  },
+  {
+    "name": "PepChain Churchill",
+    "type": "testnet",
+    "networkId": "0xcc07c9",
+    "rpcUrl": "https://churchill-rpc.pepchain.io"
+  },
+  {
+    "name": "IOLite",
+    "type": "mainnet",
+    "networkId": "0x1171337",
+    "rpcUrl": "https://net.iolite.io"
+  },
+  {
+    "name": "Auxilium",
+    "type": "mainnet",
+    "networkId": "0x1b9ac4e",
+    "rpcUrl": "https://rpc.auxilium.global"
+  },
+  {
+    "name": "Aquachain",
+    "type": "mainnet",
+    "networkId": "0x3adbc39",
+    "rpcUrl": "https://c.onical.org"
+  },
+  {
+    "name": "IPOS",
+    "type": "mainnet",
+    "networkId": "0x42e576f7",
+    "rpcUrl": "https://rpc.iposlab.com"
+  },
+  {
+    "name": "Pirl",
+    "type": "mainnet",
+    "networkId": "0xba4dc610",
+    "rpcUrl": "https://wallrpc.pirl.io"
+  },
+  {
+    "name": "Alfajores",
+    "project": "Celo",
+    "type": "testnet",
+    "networkId": "0xAEF1"
+  }
+]
