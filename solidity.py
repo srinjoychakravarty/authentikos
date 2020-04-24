@@ -19,7 +19,7 @@ def setup():
     https_rinkeby = "https://rinkeby.infura.io/v3/" + infura_key
     w3 = Web3(HTTPProvider(https_rinkeby))
     contract = w3.eth.contract(address = contract_address, abi = contract_abi.abi)
-    return contract
+    return (wallet_address, w3, ws3, contract)
 
 def list_functions(contract):
     '''lists all smart contract functions '''
@@ -36,9 +36,7 @@ def enumerate_functions(all_functions):
 # print(contract.functions.countAgencies().call())
 # print(contract.functions.contractOwner().call())
 # print(contract.functions.getAgencies().call())
-#
-# nonce = w3.eth.getTransactionCount(wallet_address)
-#
+
 # agency3 = ("ndtv.com", "0x32804f2B543f4EbEce478D9847d8446650840128")
 # agency4 = ("cnbc.com", "0x6aED3Ca3C77a75Dc8d36ce9c306eA2A7aef576e0")
 # setAgency(string _address, address _ethIdentity)
@@ -61,9 +59,25 @@ def get_chain_id(network):
         return chain_id
 
 if __name__ == '__main__':
-    contract = setup()
+    wallet_address, w3, ws3, contract = setup()
     all_functions = list_functions(contract)
     chosen_function = enumerate_functions(all_functions)
-    getter = \
-    '''contract.functions.''' + chosen_function + '''.call()'''
-    print(eval(getter))
+    if (chosen_function[0:3] == "get"):
+        getter = \
+        '''contract.functions.''' + chosen_function + '''.call()'''
+        print(eval(getter))
+    else:
+        nonce = w3.eth.getTransactionCount(wallet_address)
+        params = chosen_function[chosen_function.find('(')+1 : chosen_function.find(')')]
+        arguments = params.split(',')
+        
+        if 'address' in arguments:
+            address_at_index = arguments.index("address")
+
+        print(address_at_index)
+        # Web3.isAddress('0xd3CdA913deB6f67967B99D67aCDFa1712C293601')
+        #
+        # input_params = []
+        # for arg in arguments:
+        #     input_params.append(input("Enter parameter [" + arg + "]: "))
+        # print(input_params)
