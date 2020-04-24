@@ -1,4 +1,4 @@
-// contract at https://rinkeby.etherscan.io/address/
+// contract at https://rinkeby.etherscan.io/address/0xDc8905D3A5dEa8533318D878b42F9C76ba1A7019
 
 pragma solidity ^0.4.19;
 pragma experimental ABIEncoderV2;
@@ -9,6 +9,7 @@ contract Authentikos {
 
     struct Agency {
         address ethIdentity;
+        bool exists;
     }
 
     address public contractOwner;
@@ -34,7 +35,10 @@ contract Authentikos {
 
     function setAgency(string _address, address _ethIdentity) public {
         var agency = agencies[_address];
+        bool isNew = agency.exists;
+        require(isNew == false);
         agency.ethIdentity = _ethIdentity;
+        agency.exists = true;
         agencyCount += 1;
         stringConcat(agencyStrings, " ", _address);
     }
