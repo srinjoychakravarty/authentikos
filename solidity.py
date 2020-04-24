@@ -25,10 +25,13 @@ def list_functions(contract):
     '''lists all smart contract functions '''
     return contract.all_functions()
 
-def call_function(contract, function_name):
-    '''calls smart contract getter function '''
-    # contract.function.
-
+def enumerate_functions(all_functions):
+    '''enumerates all read functions on smart contract '''
+    function_set = {str(function).replace('<Function ', '')[:-1] for function in all_functions}
+    question = [inquirer.List('function', message = "Which function to call?", choices = function_set)]
+    answer = inquirer.prompt(question)
+    chosen_function = answer['function']
+    return chosen_function
 
 # print(contract.functions.countAgencies().call())
 # print(contract.functions.contractOwner().call())
@@ -60,7 +63,7 @@ def get_chain_id(network):
 if __name__ == '__main__':
     contract = setup()
     all_functions = list_functions(contract)
-    function_set = {str(function).replace('<Function ', '')[:-1] for function in all_functions}
-    question = [inquirer.List('function', message = "Which function to call?", choices = function_set)]
-    answer = inquirer.prompt(question)
-    print(answer["function"])
+    chosen_function = enumerate_functions(all_functions)
+    getter = \
+    '''contract.functions.''' + chosen_function + '''.call()'''
+    print(eval(getter))
