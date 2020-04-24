@@ -1,5 +1,5 @@
 from web3 import Web3, HTTPProvider
-import binascii, contract_abi, json, pprint, subprocess, sys, time
+import binascii, contract_abi, inquirer, json, pprint, subprocess, sys, time
 
 def setup():
     '''sets up connection to solidity smart contract'''
@@ -24,6 +24,11 @@ def setup():
 def list_functions(contract):
     '''lists all smart contract functions '''
     return contract.all_functions()
+
+def call_function(contract, function_name):
+    '''calls smart contract getter function '''
+    # contract.function.
+
 
 # print(contract.functions.countAgencies().call())
 # print(contract.functions.contractOwner().call())
@@ -55,4 +60,7 @@ def get_chain_id(network):
 if __name__ == '__main__':
     contract = setup()
     all_functions = list_functions(contract)
-    print(all_functions)
+    function_set = {str(function).replace('<Function ', '')[:-1] for function in all_functions}
+    question = [inquirer.List('function', message = "Which function to call?", choices = function_set)]
+    answer = inquirer.prompt(question)
+    print(answer["function"])
