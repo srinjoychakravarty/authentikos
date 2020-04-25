@@ -2,26 +2,7 @@ abi = """[
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "getAgencies",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "_address",
-				"type": "string"
-			}
-		],
-		"name": "getAgency",
+		"name": "getContractOwner",
 		"outputs": [
 			{
 				"name": "",
@@ -36,7 +17,7 @@ abi = """[
 		"constant": false,
 		"inputs": [
 			{
-				"name": "_address",
+				"name": "_checksum",
 				"type": "string"
 			},
 			{
@@ -53,7 +34,26 @@ abi = """[
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "contractOwner",
+		"name": "getAgencyCount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_checksum",
+				"type": "string"
+			}
+		],
+		"name": "getOneAgency",
 		"outputs": [
 			{
 				"name": "",
@@ -67,11 +67,11 @@ abi = """[
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "countAgencies",
+		"name": "getAllAgencies",
 		"outputs": [
 			{
 				"name": "",
-				"type": "uint256"
+				"type": "string"
 			}
 		],
 		"payable": false,

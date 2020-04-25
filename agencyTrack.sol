@@ -1,4 +1,4 @@
-// contract at https://rinkeby.etherscan.io/address/0xDc8905D3A5dEa8533318D878b42F9C76ba1A7019
+// contract at https://rinkeby.etherscan.io/address/0xC3737aF68f5471a2607C996525993a8E9AF1862F
 
 pragma solidity ^0.4.19;
 pragma experimental ABIEncoderV2;
@@ -12,11 +12,11 @@ contract Authentikos {
         bool exists;
     }
 
-    address public contractOwner;
+    address private contractOwner;
     mapping (string => Agency) agencies;
     using strings for *;
     string private agencyStrings;
-    uint16 public agencyCount;
+    uint16 private agencyCount;
 
     modifier onlyOwner() {
       require(msg.sender == contractOwner);
@@ -33,25 +33,29 @@ contract Authentikos {
         agencyStrings = s0.toSlice().concat(s3.toSlice());
     }
 
-    function setAgency(string _address, address _ethIdentity) public {
-        var agency = agencies[_address];
+    function setAgency(string _checksum, address _ethIdentity) public onlyOwner {
+        var agency = agencies[_checksum];
         bool isNew = agency.exists;
         require(isNew == false);
         agency.ethIdentity = _ethIdentity;
         agency.exists = true;
         agencyCount += 1;
-        stringConcat(agencyStrings, " ", _address);
+        stringConcat(agencyStrings, " ", _checksum);
     }
 
-    function getAgency(string _address) view public returns (address) {
-        return (agencies[_address].ethIdentity);
+    function getContractOwner() view public returns (address) {
+        return contractOwner;
     }
 
-    function getAgencies() view public returns (string) {
+    function getOneAgency(string _checksum) view public returns (address) {
+        return (agencies[_checksum].ethIdentity);
+    }
+
+    function getAllAgencies() view public returns (string) {
         return agencyStrings;
     }
 
-    function countAgencies() view public returns (uint) {
+    function getAgencyCount() view public returns (uint) {
         return agencyCount;
     }
 }

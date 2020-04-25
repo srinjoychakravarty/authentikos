@@ -10,16 +10,16 @@ def get_chain_id(network):
 
 def setup():
     '''sets up connection to solidity smart contract'''
-    network = input("Enter blockchain network: ") or "Rinkeby"
+    network = input("Enter blockchain network: \n") or "Rinkeby"
     print(network)
     chain_id = get_chain_id(network)
-    contract_address = input("Enter smart contract address: ") or "0xEEC42723E36b3cB362D9cB49b8Cd2a111454FF03"
+    contract_address = input("Enter smart contract address: \n") or "0xC3737aF68f5471a2607C996525993a8E9AF1862F"
     print(contract_address)
-    wallet_address = input("Enter your wallet address: ") or "0xC7AC16DD7b42EeEc39Ee088a8702883e073D782e"
+    wallet_address = input("Enter your wallet address: \n") or "0xC7AC16DD7b42EeEc39Ee088a8702883e073D782e"
     print(wallet_address)
-    wallet_private_key = input("Enter your private key: ") or "6065a6bd9ccc0d11fd2ffb2111e68519df26b8294489cdc45fd748dd4a4f094b"
+    wallet_private_key = input("Enter your private key: \n") or "6065a6bd9ccc0d11fd2ffb2111e68519df26b8294489cdc45fd748dd4a4f094b"
     print(wallet_private_key)
-    infura_key = input("Enter your infura api key: ") or "6c7e9aed2af146138cc7ef1986d9b558"
+    infura_key = input("Enter your infura api key: \n") or "6c7e9aed2af146138cc7ef1986d9b558"
     print(infura_key)
     websockets_rinkeby = "wss://rinkeby.infura.io/ws/v3/" + infura_key
     ws3 = Web3(Web3.WebsocketProvider(websockets_rinkeby, websocket_kwargs={'timeout': 60}))
@@ -46,7 +46,8 @@ def execute_function(chosen_function):
         getter = \
         '''contract.functions.''' + chosen_function + '''.call()'''
         result_from_getter = eval(getter)
-        print(f"{chosen_function} called successfully!\nResult: {str(result_from_getter)}")
+        output = (f"{chosen_function} called successfully!\nResult: {str(result_from_getter)}")
+        return output
     else:
         nonce = w3.eth.getTransactionCount(wallet_address)
         params = chosen_function[chosen_function.find('(')+1 : chosen_function.find(')')]
@@ -71,11 +72,19 @@ def execute_function(chosen_function):
         construct_hex = \
         '''(''' + str(txn_hash) + ').hex()'
         txn_hash_hex = "0x" + eval(construct_hex)
-        print(txn_hash_hex)
-        print(f"{chosen_method}({user_inputs[0]}, {user_inputs[1]}) executed successfully!\nTransaction hash: {txn_hash_hex}")
+        output = (f"{chosen_method}({user_inputs[0]}, {user_inputs[1]}) executed successfully!\nTransaction hash: {txn_hash_hex}")
+        return output
 
 if __name__ == '__main__':
+    print("\nWelcome to Authentikos! What would you like to do?\n")
     wallet_address, w3, ws3, contract, chain_id, wallet_private_key = setup()
-    all_functions = list_functions(contract)
-    chosen_function = enumerate_functions(all_functions)
-    execute_function(chosen_function)
+    loop_again = True
+    while (loop_again == True):
+        all_functions = list_functions(contract)
+        chosen_function = enumerate_functions(all_functions)
+        output = execute_function(chosen_function)
+        print(output)
+        choice = input("\nWould you like to quit? (yes [y] | no [n]) \n")
+        if (choice == "yes" or choice == "y" or choice == "exit" or choice == "q" or choice == "quit"):
+            loop_again = False
+            print("\nThanks for using Authentikos...bye now!") # Print a message that we are all finished.
