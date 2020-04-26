@@ -66,17 +66,16 @@ if __name__ == '__main__':
         print(current_agency)
         ratings_dict = dict(entity)
         checksum = ratings_dict.get('checksum')
-        del ratings_dict['checksum']
-        ratings_dict = {checksum: {'ratings_dict': ratings_dict}}
+        del ratings_dict['checksum']    
         try:
             ssl_details = check_it_out(current_agency, 443)
-            dict_to_dump = ratings_dict.update({'ssl_details': ssl_details})
-            outer_dict.update(dict_to_dump)
+            inner_dict = {checksum: {'ratings_dict': ratings_dict, 'ssl_details': ssl_details}}
+            outer_dict.update(inner_dict)
         except:
-            outer_dict.update(ratings_dict)
+            inner_dict = {checksum: {'ratings_dict': ratings_dict}}
+            outer_dict.update(inner_dict)
             pass
-
     print(outer_dict)
     print(len(outer_dict.keys()))
-    with open('authentikos3.txt', 'w') as fp:
+    with open('authentikos_wax.txt', 'w') as fp:
         json.dump(outer_dict, fp, indent=4, sort_keys=True, default=str)
