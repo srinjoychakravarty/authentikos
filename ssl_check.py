@@ -1,11 +1,10 @@
-
 from collections import namedtuple
 from cryptography import x509
 from cryptography.x509.oid import NameOID
 from OpenSSL import SSL
 from socket import socket
 from tinydb import TinyDB, Query, where
-import concurrent.futures, dateparser, datetime, hashlib, idna, os
+import concurrent.futures, dateparser, datetime, hashlib, idna, json, os
 
 def get_certificate(hostname, port):
     hostname_idna = idna.encode(hostname)
@@ -48,7 +47,7 @@ def get_issuer(cert):
 
 def print_basic_info(hostinfo):
     expiry = hostinfo.cert.not_valid_after
-    cert_dict = {'host_name': hostinfo.hostname, 'peer_name': hostinfo.peername, 'common_name': get_common_name(hostinfo.cert), 'san': get_alt_names(hostinfo.cert), 'issuer': get_issuer(hostinfo.cert), 'not_before': hostinfo.cert.not_valid_before, 'not_after': expiry, 'valid_cert': (expiry > datetime.datetime.now()) }
+    cert_dict = {'peer_name': hostinfo.peername, 'common_name': get_common_name(hostinfo.cert), 'san': get_alt_names(hostinfo.cert), 'issuer': get_issuer(hostinfo.cert), 'not_before': hostinfo.cert.not_valid_before, 'not_after': expiry, 'valid_cert': (expiry > datetime.datetime.now()) }
     return cert_dict
 
 def check_it_out(hostname, port):
@@ -60,14 +59,24 @@ if __name__ == '__main__':
     HostInfo = namedtuple(field_names='cert hostname peername', typename='HostInfo')
     location = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
     db = TinyDB(location + "/trustdb.json")
-    hostnames = []
+    news_agencies = []
+    outer_dict = {}
     for entity in db.search(where('news_agency')):
-        hostnames.append(entity.get('news_agency'))
-    sslcerts = []
-    for host in hostnames:
-        print(host)
+        current_agency = entity.get('news_agency')
+        print(current_agency)
+        ratings_dict = dict(entity)
+        checksum = ratings_dict.get('checksum')
+        del ratings_dict['checksum']
+        ratings_dict = {checksum: {'ratings_dict': ratings_dict}}
         try:
-            sslcerts.append(check_it_out(host, 443))
+            ssl_details = check_it_out(current_agency, 443)
+            dict_to_dump = ratings_dict.update({'ssl_details': ssl_details})
+            outer_dict.update(dict_to_dump)
         except:
+            outer_dict.update(ratings_dict)
             pass
-    print(sslcerts)
+
+    print(outer_dict)
+    print(len(outer_dict.keys()))
+    with open('authentikos3.txt', 'w') as fp:
+        json.dump(outer_dict, fp, indent=4, sort_keys=True, default=str)

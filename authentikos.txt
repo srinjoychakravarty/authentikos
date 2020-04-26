@@ -1,0 +1,1073 @@
+{
+    "0f485f5de291fce6d65afc17de583214": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.33,
+            "democratic_trust": 0.18,
+            "fact_check_rating": "nan",
+            "news_agency": "worldnewsdailyreport.com",
+            "republican_familiarity": 0.43,
+            "republican_trust": 0.21
+        }
+    },
+    "0f937aca7c7b4324dcf073a1e63f73bd": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.38,
+            "democratic_trust": 0.4,
+            "fact_check_rating": "nan",
+            "news_agency": "bostonglobe.com",
+            "republican_familiarity": 0.35,
+            "republican_trust": 0.27
+        }
+    },
+    "14b492cf6727dd1ab3a6efc7556b91bc": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.78,
+            "democratic_trust": 0.41,
+            "fact_check_rating": 0.66,
+            "news_agency": "theguardian.com",
+            "republican_familiarity": 0.59,
+            "republican_trust": 0.26
+        }
+    },
+    "15e5985b5402b180ad0ff3cdd458ddfd": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.63,
+            "democratic_trust": 0.4,
+            "fact_check_rating": "nan",
+            "news_agency": "fortune.com",
+            "republican_familiarity": 0.55,
+            "republican_trust": 0.33
+        }
+    },
+    "173efb7aff82da11a06578552a850ebd": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.08,
+            "democratic_trust": 0.11,
+            "fact_check_rating": "nan",
+            "news_agency": "newsexaminer.net",
+            "republican_familiarity": 0.11,
+            "republican_trust": 0.14
+        }
+    },
+    "1ae266f0a761629402b73e3237e3195b": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.17,
+            "fact_check_rating": "nan",
+            "news_agency": "angrypatriotmovement.com",
+            "republican_familiarity": 0.08,
+            "republican_trust": 0.19
+        }
+    },
+    "1b114e669a32fd5523ab9a0169c5526f": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.77,
+            "democratic_trust": 0.31,
+            "fact_check_rating": "nan",
+            "news_agency": "infowars.com",
+            "republican_familiarity": 0.7,
+            "republican_trust": 0.4
+        }
+    },
+    "1b3726503af8d49e9073524443235308": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 1.67,
+            "democratic_trust": 1.23,
+            "fact_check_rating": "nan",
+            "news_agency": "nytimes.com",
+            "republican_familiarity": 1.58,
+            "republican_trust": 0.76
+        }
+    },
+    "1c9e5011cc665b6dd25c470371a1fc7d": {
+        "ratings_dict": {
+            "classifier": "mainstreamstream",
+            "democratic_familiarity": 0.64,
+            "democratic_trust": 0.43,
+            "fact_check_rating": "nan",
+            "news_agency": "economist.com",
+            "republican_familiarity": 0.46,
+            "republican_trust": 0.31
+        }
+    },
+    "1d3355bc85a66dfd13a09f3412c7f085": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.09,
+            "democratic_trust": 0.2,
+            "fact_check_rating": "nan",
+            "news_agency": "blacklistednews.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.17
+        }
+    },
+    "1ff9fc776b1a4b81b419246ed6859701": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.71,
+            "democratic_trust": 0.53,
+            "fact_check_rating": "nan",
+            "news_agency": "abc.go.com",
+            "republican_familiarity": 0.66,
+            "republican_trust": 0.38
+        }
+    },
+    "213f2e7f6968dd534eb43ef113fce3e1": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.09,
+            "democratic_trust": 0.19,
+            "fact_check_rating": 0.38,
+            "news_agency": "redstate.com",
+            "republican_familiarity": 0.13,
+            "republican_trust": 0.21
+        }
+    },
+    "24ae1624b3ebbf965b081d5576788e67": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.19,
+            "fact_check_rating": "nan",
+            "news_agency": "crooksandliars.com",
+            "republican_familiarity": 0.06,
+            "republican_trust": 0.17
+        }
+    },
+    "251a5b8e140a4a07def415e616d000a0": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 1.71,
+            "democratic_trust": 1.2,
+            "fact_check_rating": 0.15,
+            "news_agency": "washingtonpost.com",
+            "republican_familiarity": 1.68,
+            "republican_trust": 0.78
+        }
+    },
+    "2898ce92e0f40e6ae0fcf2172a57d962": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.08,
+            "democratic_trust": 0.11,
+            "fact_check_rating": 0.66,
+            "news_agency": "palmerreport.com",
+            "republican_familiarity": 0.05,
+            "republican_trust": 0.12
+        }
+    },
+    "2b1b045d2f61d3b09d3d9de9ca54d67a": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.1,
+            "democratic_trust": 0.19,
+            "fact_check_rating": 0.91,
+            "news_agency": "patriotpost.us",
+            "republican_familiarity": 0.13,
+            "republican_trust": 0.22
+        }
+    },
+    "2bb13bea21c458421e33179105662bdd": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.92,
+            "democratic_trust": 0.29,
+            "fact_check_rating": "nan",
+            "news_agency": "breitbart.com",
+            "republican_familiarity": 0.91,
+            "republican_trust": 0.49
+        }
+    },
+    "307c6a934ca34b4589d2cfd839c29486": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.59,
+            "democratic_trust": 0.36,
+            "fact_check_rating": 0.44,
+            "news_agency": "politico.com",
+            "republican_familiarity": 0.46,
+            "republican_trust": 0.22
+        }
+    },
+    "35826b2bd227588ccf7f5d2d95cb8ead": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.25,
+            "democratic_trust": 0.37,
+            "fact_check_rating": "nan",
+            "news_agency": "americannews.com",
+            "republican_familiarity": 0.27,
+            "republican_trust": 0.37
+        }
+    },
+    "3624677b70f6461aec4f1612c0fed81d": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.56,
+            "democratic_trust": 0.4,
+            "fact_check_rating": "nan",
+            "news_agency": "aol.com/news",
+            "republican_familiarity": 0.52,
+            "republican_trust": 0.29
+        }
+    },
+    "43fec8dbf4f4d0ba4945d6a2870c7609": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.08,
+            "democratic_trust": 0.14,
+            "fact_check_rating": 0.03,
+            "news_agency": "news4ktla.com",
+            "republican_familiarity": 0.09,
+            "republican_trust": 0.15
+        }
+    },
+    "44ccba356cad427d1644082eaf134b9e": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.08,
+            "democratic_trust": 0.21,
+            "fact_check_rating": "nan",
+            "news_agency": "newsbreakshere.com",
+            "republican_familiarity": 0.08,
+            "republican_trust": 0.18
+        }
+    },
+    "45378cc7603e61fcc21ecbfc957b52dd": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.04,
+            "democratic_trust": 0.09,
+            "fact_check_rating": 0.03,
+            "news_agency": "thelastlineofdefense.org",
+            "republican_familiarity": 0.05,
+            "republican_trust": 0.13
+        }
+    },
+    "49f8f98bfe83a7026ca210b87c3715c0": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.2,
+            "fact_check_rating": 0.84,
+            "news_agency": "onepoliticalplaza.com",
+            "republican_familiarity": 0.09,
+            "republican_trust": 0.18
+        }
+    },
+    "4edff1b5750068279fb2e0230c3e5380": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.05,
+            "democratic_trust": 0.2,
+            "fact_check_rating": "nan",
+            "news_agency": "ijr.com",
+            "republican_familiarity": 0.09,
+            "republican_trust": 0.17
+        }
+    },
+    "4f69f9cc0694ceb69e22a1836d59f872": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.96,
+            "democratic_trust": 0.62,
+            "fact_check_rating": "nan",
+            "news_agency": "nbc.com",
+            "republican_familiarity": 0.96,
+            "republican_trust": 0.48
+        }
+    },
+    "562bf949359cdbe1ad0dc9665bff231e": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.04,
+            "democratic_trust": 0.08,
+            "fact_check_rating": 0.81,
+            "news_agency": "redflagnews.com",
+            "republican_familiarity": 0.04,
+            "republican_trust": 0.11
+        }
+    },
+    "58cfd76a3a07e9a35f946bff46add44e": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan-partisan",
+            "democratic_familiarity": 0.06,
+            "democratic_trust": 0.12,
+            "fact_check_rating": "nan",
+            "news_agency": "newcenturytimes.com",
+            "republican_familiarity": 0.08,
+            "republican_trust": 0.14
+        }
+    },
+    "5d1ee56ea143e444daaf1fc35b7ee411": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.2,
+            "fact_check_rating": 0.09,
+            "news_agency": "whatdoesitmean.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.18
+        }
+    },
+    "621c9a194124fa14ead9fada5901b373": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.05,
+            "democratic_trust": 0.11,
+            "fact_check_rating": 0.03,
+            "news_agency": "usasupreme.com",
+            "republican_familiarity": 0.06,
+            "republican_trust": 0.16
+        }
+    },
+    "6516070744623d5b202c1aed9c8cd167": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.12,
+            "democratic_trust": 0.14,
+            "fact_check_rating": "nan",
+            "news_agency": "bipartisanreport.com",
+            "republican_familiarity": 0.09,
+            "republican_trust": 0.15
+        }
+    },
+    "661d995585bc6c82ade77f53e7603dfd": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.78,
+            "democratic_trust": 0.64,
+            "fact_check_rating": "nan",
+            "news_agency": "npr.org",
+            "republican_familiarity": 0.69,
+            "republican_trust": 0.42
+        }
+    },
+    "69fee2d36eb18723ea00ad9dec37a69b": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.02,
+            "democratic_trust": 0.1,
+            "fact_check_rating": 0.41,
+            "news_agency": "regated.com",
+            "republican_familiarity": 0.03,
+            "republican_trust": 0.12
+        }
+    },
+    "6a3bd587d57d5503a436b77127565c5b": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.6,
+            "democratic_trust": 0.45,
+            "fact_check_rating": "nan",
+            "news_agency": "nypost.com",
+            "republican_familiarity": 0.55,
+            "republican_trust": 0.3
+        }
+    },
+    "6c1b9961fad415d1db694ac8216cf83e": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.04,
+            "democratic_trust": 0.12,
+            "fact_check_rating": "nan",
+            "news_agency": "civictribune.com",
+            "republican_familiarity": 0.06,
+            "republican_trust": 0.14
+        }
+    },
+    "75128c36e7891dda983bfd3a246656e4": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 1.75,
+            "democratic_trust": 1.15,
+            "fact_check_rating": "nan",
+            "news_agency": "msnbc.com",
+            "republican_familiarity": 1.71,
+            "republican_trust": 0.71
+        }
+    },
+    "7846fc7e8761812c02c4e3667c861472": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.12,
+            "democratic_trust": 0.23,
+            "fact_check_rating": 0.09,
+            "news_agency": "westernjournal.com",
+            "republican_familiarity": 0.13,
+            "republican_trust": 0.21
+        }
+    },
+    "799497bdca60cb2f1522d66166f15274": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.32,
+            "democratic_trust": 0.33,
+            "fact_check_rating": "nan",
+            "news_agency": "dailycaller.com",
+            "republican_familiarity": 0.42,
+            "republican_trust": 0.38
+        }
+    },
+    "7c1e014a0e6e2be77f0f828f746db60d": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.86,
+            "democratic_trust": 0.59,
+            "fact_check_rating": "nan",
+            "news_agency": "cbs.com",
+            "republican_familiarity": 0.86,
+            "republican_trust": 0.44
+        }
+    },
+    "7c486223d71ebed58d0ccad9b3f5a8c8": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.09,
+            "democratic_trust": 0.22,
+            "fact_check_rating": 0.53,
+            "news_agency": "realnewsrightnow.com",
+            "republican_familiarity": 0.1,
+            "republican_trust": 0.19
+        }
+    },
+    "7c524b0b1d24dcce47aa8b1afe620b63": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.41,
+            "democratic_trust": 0.25,
+            "fact_check_rating": 0.34,
+            "news_agency": "salon.com",
+            "republican_familiarity": 0.25,
+            "republican_trust": 0.13
+        }
+    },
+    "7cb0b9018b5f04011e65078617795eb6": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.21,
+            "democratic_trust": 0.32,
+            "fact_check_rating": 0.75,
+            "news_agency": "sfchronicle.com",
+            "republican_familiarity": 0.19,
+            "republican_trust": 0.2
+        }
+    },
+    "82e52a60191034802a6af3c38f7dc1b8": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.2,
+            "fact_check_rating": 0.75,
+            "news_agency": "socialeverythings.com",
+            "republican_familiarity": 0.06,
+            "republican_trust": 0.16
+        }
+    },
+    "8364f4139f2dc6ed0db4023ffaef7bba": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.21,
+            "democratic_trust": 0.12,
+            "fact_check_rating": 0.59,
+            "news_agency": "thefederalistpapers.org",
+            "republican_familiarity": 0.27,
+            "republican_trust": 0.19
+        }
+    },
+    "8389e4ac0552cd50a9f07f86e23462e7": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.6,
+            "democratic_trust": 0.47,
+            "fact_check_rating": "nan",
+            "news_agency": "chicagotribune.com",
+            "republican_familiarity": 0.53,
+            "republican_trust": 0.29
+        }
+    },
+    "8601653e6d685263595762760415dd15": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.09,
+            "democratic_trust": 0.12,
+            "fact_check_rating": 0.16,
+            "news_agency": "uspoliticsinfo.com",
+            "republican_familiarity": 0.11,
+            "republican_trust": 0.15
+        }
+    },
+    "88f15a61e87825b1211ffeb2fc4a8220": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.21,
+            "democratic_trust": 0.29,
+            "fact_check_rating": "nan",
+            "news_agency": "conservativedailypost.com",
+            "republican_familiarity": 0.38,
+            "republican_trust": 0.46
+        }
+    },
+    "8987639e553b5e1558cc939f41071d27": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.2,
+            "fact_check_rating": "nan",
+            "news_agency": "clashdaily.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.15
+        }
+    },
+    "8f00b2b61ba335244231d632d390bf8d": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.2,
+            "fact_check_rating": "nan",
+            "news_agency": "beforeitsnews.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.19
+        }
+    },
+    "92398575509fbcdaf15f3300afa90f82": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.03,
+            "democratic_trust": 0.1,
+            "fact_check_rating": "nan",
+            "news_agency": "ahtribune.com",
+            "republican_familiarity": 0.04,
+            "republican_trust": 0.14
+        }
+    },
+    "94476191550ed07253e7d304ef75f129": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.09,
+            "democratic_trust": 0.12,
+            "fact_check_rating": "nan",
+            "news_agency": "globalrealnews.com",
+            "republican_familiarity": 0.1,
+            "republican_trust": 0.15
+        }
+    },
+    "95ec266b244de718b80c652a08af06fa": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 1.71,
+            "democratic_trust": 1.03,
+            "fact_check_rating": "nan",
+            "news_agency": "huffingtonpost.com",
+            "republican_familiarity": 1.69,
+            "republican_trust": 0.7
+        }
+    },
+    "99d1febfbc0f579a6c3bb3559bbe7ace": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 1.8,
+            "democratic_trust": 0.61,
+            "fact_check_rating": "nan",
+            "news_agency": "foxnews.com",
+            "republican_familiarity": 1.82,
+            "republican_trust": 1.11
+        }
+    },
+    "9ad233451952a028ace8ab8ff045a589": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.11,
+            "fact_check_rating": "nan",
+            "news_agency": "empireherald.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.14
+        }
+    },
+    "9b58a8779383348cb22aedb790622595": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 1.7,
+            "democratic_trust": 1.09,
+            "fact_check_rating": "nan",
+            "news_agency": "usatoday.com",
+            "republican_familiarity": 1.69,
+            "republican_trust": 0.87
+        }
+    },
+    "9d4274714e9b1c8db48ee7abef53eb07": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.06,
+            "democratic_trust": 0.09,
+            "fact_check_rating": 0.13,
+            "news_agency": "youngcons.com",
+            "republican_familiarity": 0.09,
+            "republican_trust": 0.14
+        }
+    },
+    "9d80031204bbe65f2b74283d0fea7f39": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.68,
+            "democratic_trust": 0.47,
+            "fact_check_rating": "nan",
+            "news_agency": "news.yahoo.com",
+            "republican_familiarity": 0.66,
+            "republican_trust": 0.34
+        }
+    },
+    "9f5bbbcbad4a48edd86162fabbe90b6e": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.41,
+            "democratic_trust": 0.4,
+            "fact_check_rating": "nan",
+            "news_agency": "dailykos.com",
+            "republican_familiarity": 0.27,
+            "republican_trust": 0.29
+        }
+    },
+    "a35a2c799234ff6587398e68679aec6d": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.06,
+            "democratic_trust": 0.11,
+            "fact_check_rating": 0.13,
+            "news_agency": "trueactivist.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.13
+        }
+    },
+    "a5204fc53dbb47014a27fbd4a59bc1c4": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.06,
+            "democratic_trust": 0.27,
+            "fact_check_rating": "nan",
+            "news_agency": "notallowedto.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.27
+        }
+    },
+    "a66294ec7d2d0d8e3b22c293a88d14f4": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.1,
+            "democratic_trust": 0.21,
+            "fact_check_rating": 0.66,
+            "news_agency": "rawstory.com",
+            "republican_familiarity": 0.08,
+            "republican_trust": 0.17
+        }
+    },
+    "ab6e279094ef47513dff8f3f464c96f8": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.08,
+            "democratic_trust": 0.08,
+            "fact_check_rating": 0.72,
+            "news_agency": "rightwingnews.com",
+            "republican_familiarity": 0.14,
+            "republican_trust": 0.17
+        }
+    },
+    "abaf40789fc8780fe8a59496bafd71c0": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.17,
+            "democratic_trust": 0.28,
+            "fact_check_rating": "nan",
+            "news_agency": "channel24news.com",
+            "republican_familiarity": 0.13,
+            "republican_trust": 0.21
+        }
+    },
+    "acacfa6ba41b0b63cceb5d292d8ee287": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.1,
+            "democratic_trust": 0.12,
+            "fact_check_rating": "nan",
+            "news_agency": "dailynewsbin.com",
+            "republican_familiarity": 0.12,
+            "republican_trust": 0.14
+        }
+    },
+    "af18557df98166364242961329254724": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.15,
+            "democratic_trust": 0.22,
+            "fact_check_rating": "nan",
+            "news_agency": "newsmax.com",
+            "republican_familiarity": 0.23,
+            "republican_trust": 0.24
+        }
+    },
+    "b0ecdbb820fb694b0b848547585c7a25": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.19,
+            "democratic_trust": 0.29,
+            "fact_check_rating": "nan",
+            "news_agency": "conservativetribune.com",
+            "republican_familiarity": 0.28,
+            "republican_trust": 0.48
+        }
+    },
+    "b74046628b12e0629949e6c26a329018": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 1.82,
+            "democratic_trust": 1.23,
+            "fact_check_rating": "nan",
+            "news_agency": "cnn.com",
+            "republican_familiarity": 1.79,
+            "republican_trust": 0.76
+        }
+    },
+    "b93240ec90e84c62af7dfe68de3a2d7e": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.82,
+            "democratic_trust": 0.47,
+            "fact_check_rating": 0.06,
+            "news_agency": "newsweek.com",
+            "republican_familiarity": 0.81,
+            "republican_trust": 0.38
+        }
+    },
+    "bbf141931544afc276ad287522d9c6b8": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.11,
+            "democratic_trust": 0.13,
+            "fact_check_rating": "nan",
+            "news_agency": "dailyheadlines.net",
+            "republican_familiarity": 0.17,
+            "republican_trust": 0.15
+        }
+    },
+    "be1f3ff92f92218468ee0bee2a63b97e": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.05,
+            "democratic_trust": 0.07,
+            "fact_check_rating": "nan",
+            "news_agency": "chicksontheright.com",
+            "republican_familiarity": 0.12,
+            "republican_trust": 0.15
+        }
+    },
+    "c01372b7ab262712d0d65bda69049992": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.09,
+            "democratic_trust": 0.21,
+            "fact_check_rating": 0.16,
+            "news_agency": "yournewswire.com",
+            "republican_familiarity": 0.09,
+            "republican_trust": 0.17
+        }
+    },
+    "c0a5f5c6933b6e6363ed5feb079255c9": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.47,
+            "democratic_trust": 0.43,
+            "fact_check_rating": 0.06,
+            "news_agency": "latimes.com",
+            "republican_familiarity": 0.38,
+            "republican_trust": 0.22
+        }
+    },
+    "c59252089eb285ab8a5cda3d7a7b4bfe": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.08,
+            "democratic_trust": 0.21,
+            "fact_check_rating": "nan",
+            "news_agency": "activepost.com",
+            "republican_familiarity": 0.09,
+            "republican_trust": 0.18
+        }
+    },
+    "c6c8a98b11f03abf9b006101f99bdf17": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.06,
+            "democratic_trust": 0.2,
+            "fact_check_rating": "nan",
+            "news_agency": "downtrend.com",
+            "republican_familiarity": 0.08,
+            "republican_trust": 0.17
+        }
+    },
+    "c6d50076ab4e866e15cfd6ddcc77a699": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.11,
+            "democratic_trust": 0.27,
+            "fact_check_rating": 1.06,
+            "news_agency": "react365.com",
+            "republican_familiarity": 0.12,
+            "republican_trust": 0.28
+        }
+    },
+    "c809c0b228821ed7b95768a5fc8e66ba": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.79,
+            "democratic_trust": 0.45,
+            "fact_check_rating": "nan",
+            "news_agency": "bloomberg.com",
+            "republican_familiarity": 0.79,
+            "republican_trust": 0.41
+        }
+    },
+    "c888f140f0c2cd64fd7ba563b93e8097": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.08,
+            "democratic_trust": 0.2,
+            "fact_check_rating": 0.44,
+            "news_agency": "thedailysheeple.com",
+            "republican_familiarity": 0.08,
+            "republican_trust": 0.17
+        }
+    },
+    "ca19e0b76e13496bb2c37babd0fb7759": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.5,
+            "democratic_trust": 0.46,
+            "fact_check_rating": "nan",
+            "news_agency": "bbc.co.uk",
+            "republican_familiarity": 0.42,
+            "republican_trust": 0.3
+        }
+    },
+    "cee90b20c6f6f682095d130ab75a2bf7": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.13,
+            "democratic_trust": 0.34,
+            "fact_check_rating": "nan",
+            "news_agency": "now8news.com",
+            "republican_familiarity": 0.14,
+            "republican_trust": 0.33
+        }
+    },
+    "d061e62c09e8c363752ddfa81c54b3ba": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.2,
+            "fact_check_rating": "nan",
+            "news_agency": "antiwar.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.16
+        }
+    },
+    "d0a759558f0e28181573400f92ac533b": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.03,
+            "democratic_trust": 0.09,
+            "fact_check_rating": 0.56,
+            "news_agency": "pamelageller.com",
+            "republican_familiarity": 0.04,
+            "republican_trust": 0.12
+        }
+    },
+    "d229b60c4e7d85bb990a7c0114c56a59": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.84,
+            "democratic_trust": 0.45,
+            "fact_check_rating": "nan",
+            "news_agency": "dailywire.com",
+            "republican_familiarity": 0.9,
+            "republican_trust": 0.43
+        }
+    },
+    "d797e79292867d0b9369ab247c9fac9b": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.93,
+            "democratic_trust": 0.81,
+            "fact_check_rating": 0.03,
+            "news_agency": "wsj.com",
+            "republican_familiarity": 0.82,
+            "republican_trust": 0.64
+        }
+    },
+    "d961184b2f11a39aaa130ade67dd02ae": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.3,
+            "democratic_trust": 0.28,
+            "fact_check_rating": "nan",
+            "news_agency": "dailybuzzlive.com",
+            "republican_familiarity": 0.27,
+            "republican_trust": 0.21
+        }
+    },
+    "dbbb88dd5835637c6c4b2e3c54c2669e": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.12,
+            "democratic_trust": 0.31,
+            "fact_check_rating": "nan",
+            "news_agency": "commondreams.org",
+            "republican_familiarity": 0.11,
+            "republican_trust": 0.28
+        }
+    },
+    "de4f219307c7ad05017dcf865409bb3a": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.06,
+            "democratic_trust": 0.1,
+            "fact_check_rating": "nan",
+            "news_agency": "usuncut.com",
+            "republican_familiarity": 0.05,
+            "republican_trust": 0.12
+        }
+    },
+    "e0acdb7d3796cec5b6552685c18cb977": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.04,
+            "democratic_trust": 0.09,
+            "fact_check_rating": "nan",
+            "news_agency": "heatst.com",
+            "republican_familiarity": 0.06,
+            "republican_trust": 0.11
+        }
+    },
+    "e808a175d41bb03e5f74ba4f95ba8a2a": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.05,
+            "democratic_trust": 0.1,
+            "fact_check_rating": 0.06,
+            "news_agency": "theracketreport.com",
+            "republican_familiarity": 0.06,
+            "republican_trust": 0.11
+        }
+    },
+    "ea4b37e93f7c78bd7769d540e27c0b64": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.93,
+            "democratic_trust": 0.73,
+            "fact_check_rating": 0.91,
+            "news_agency": "pbs.org",
+            "republican_familiarity": 0.92,
+            "republican_trust": 0.58
+        }
+    },
+    "ed5f1c72c3acd232a7cb1d4bde4318b0": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.47,
+            "democratic_trust": 0.4,
+            "fact_check_rating": "nan",
+            "news_agency": "nydailynews.com",
+            "republican_familiarity": 0.41,
+            "republican_trust": 0.26
+        }
+    },
+    "f27efe6306f54d9d62b9d27f6a3c02ac": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.06,
+            "democratic_trust": 0.19,
+            "fact_check_rating": "nan",
+            "news_agency": "bb4sp.com",
+            "republican_familiarity": 0.06,
+            "republican_trust": 0.16
+        }
+    },
+    "f3408542d52cb5a4c7f9d764ba80713b": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.11,
+            "democratic_trust": 0.22,
+            "fact_check_rating": "nan",
+            "news_agency": "dailysignal.com",
+            "republican_familiarity": 0.1,
+            "republican_trust": 0.18
+        }
+    },
+    "f5a2147b2abfe89f230d31a186a1b016": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.21,
+            "democratic_trust": 0.33,
+            "fact_check_rating": "nan",
+            "news_agency": "freedomdaily.com",
+            "republican_familiarity": 0.25,
+            "republican_trust": 0.34
+        }
+    },
+    "f74d90e031a92ac89c9de2dace5ccd08": {
+        "ratings_dict": {
+            "classifier": "hyperpartisan",
+            "democratic_familiarity": 0.22,
+            "democratic_trust": 0.24,
+            "fact_check_rating": 0.16,
+            "news_agency": "thepoliticalinsider.com",
+            "republican_familiarity": 0.24,
+            "republican_trust": 0.21
+        }
+    },
+    "f9f5ef692418144607ee1919da1dd000": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.22,
+            "democratic_trust": 0.44,
+            "fact_check_rating": 0.16,
+            "news_agency": "thenewyorkevening.com",
+            "republican_familiarity": 0.18,
+            "republican_trust": 0.36
+        }
+    },
+    "fe464c3ede16349154a5fe7c53a41efb": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.45,
+            "democratic_trust": 0.34,
+            "fact_check_rating": "nan",
+            "news_agency": "dailymail.co.uk",
+            "republican_familiarity": 0.4,
+            "republican_trust": 0.25
+        }
+    },
+    "ssl_details": {
+        "common_name": "yournewswire.com",
+        "issuer": "Let's Encrypt Authority X3",
+        "not_after": "2020-06-16 00:46:36",
+        "not_before": "2020-03-18 00:46:36",
+        "peer_name": [
+            "34.217.166.87",
+            443
+        ],
+        "san": [
+            "www.yournewswire.com",
+            "yournewswire.com"
+        ],
+        "valid_cert": true
+    }
+}
