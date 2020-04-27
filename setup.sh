@@ -11,6 +11,8 @@ sudo pip3 install pyOpenSSL
 sudo pip3 install tinydb
 sudo pip3 install sudo pip3 install dataparser
 sudo pip3 install bigchaindb-driver
+sudo pip3 install web3
+sudo pip3 install inquirer
 sudo apt install curl -y
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose

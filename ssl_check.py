@@ -77,5 +77,5 @@ if __name__ == '__main__':
             pass
     print(outer_dict)
     print(len(outer_dict.keys()))
-    with open('authentikos_wax.txt', 'w') as fp:
-        json.dump(outer_dict, fp, indent=4, sort_keys=True, default=str)
+    with open('authentikos.txt', 'w') as fp:
+        json.dump(outer_dict, fp, indent=4, sort_keys = True, default = str)

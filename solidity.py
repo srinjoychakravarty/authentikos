@@ -55,6 +55,7 @@ def execute_function(chosen_function):
         number_of_args = len(arguments)
         if 'address' in arguments:
             address_at_index = arguments.index("address")
+            # check for address syntax of ethereum
         user_inputs = []
         for x in range(1, number_of_args + 1):
             user_inputs.append(input(f"Please enter Parameter {x}: "))
@@ -88,3 +89,4 @@ if __name__ == '__main__':
         if (choice == "yes" or choice == "y" or choice == "exit" or choice == "q" or choice == "quit"):
             loop_again = False
             print("\nThanks for using Authentikos...bye now!") # Print a message that we are all finished.
+            
