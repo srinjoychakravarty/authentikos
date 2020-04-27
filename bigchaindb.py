@@ -27,22 +27,23 @@ def find_asset(search_term):
     return retrieved_object
 
 if __name__ == '__main__':
-
     connection_choice = input("\nWelcome to Authentikos! \nWhat would you like to connect BigChainDB? [yes (y) | no (n)] \n")
-    print(connection_choice)
-    if (connection_choice == "yes" or "y"):
+    if (connection_choice == "yes" or connection_choice == "y"):
         print("\nconnecting to bigchaindb...")
         bdb = connect_db()
         print(f"\nConnection Successful! \n {bdb}")
         keypair_choice = input("\nWuld you like to gemerate a BigChainDB keypair? [yes (y) | no (n)]\n")
-        if (keypair_choice == "yes" or "y"):
+        if (keypair_choice == "yes" or keypair_choice == "y"):
             print("\ngenerating keys...")
             alice = generate_key()
             print(f"\nYour public key is: {alice.public_key}")
             print(f"\nYour private key is: {alice.private_key}")
-        else:
-            print("\nThanks for using Authentikos...bye now!")   
-    else:
+            import_choice = input("\nWuld you like to import data to BigChainDB from a json file? [yes (y) | no (n)]\n")
+            if (import_choice == "yes" or import_choice == "y"):
+                import_choice = input("\nName of file? (make sure .json file is in the same directory as this script) [yes (y) | no (n)]\n")
+        elif (keypair_choice == "no" or keypair_choice == "n"):
+            print("\nThanks for using Authentikos...bye now!") 
+    elif (connection_choice == "no" or connection_choice == "n"):
         print("\nThanks for using Authentikos...bye now!") 
         
     # filename = 'authentikos.txt'
