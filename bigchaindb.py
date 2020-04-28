@@ -96,7 +96,13 @@ if __name__ == '__main__':
                 else:
                     print("\n No search decision! Thanks for using Authentikos...bye now!") 
         elif (keypair_choice == "no" or keypair_choice == "n"):
-            print("\nThanks for using Authentikos...bye now!") 
+            import_decision = input("\nWould you like to import your own BigChainDB private key? [yes (y) | no (n)]\n")
+            if(import_decision == "yes" or import_decision == "y"):
+                alice = input("\nType in or Copy/Paste in your private key: \n") or "CCupfJjW4gcve67Tz76qAUyniw55pBAGpbn7wR9iAXTZ"
+            elif(import_decision == "no" or import_decision == "n"):
+                print("\n Sorry! BigChainDB requires a private key to be imported or generated! Thanks for using Authentikos...bye now!") 
+            else:
+                 print("\n No key import decision! Thanks for using Authentikos...bye now!") 
         else:
             print("\n No keypair generation decision! Thanks for using Authentikos...bye now!") 
     elif (connection_choice == "no" or connection_choice == "n"):
