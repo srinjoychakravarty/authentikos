@@ -1,0 +1,11 @@
+    {"1ae266f0a761629402b73e3237e3195b": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.17,
+            "fact_check_rating": "nan",
+            "news_agency": "angrypatriotmovement.com",
+            "republican_familiarity": 0.08,
+            "republican_trust": 0.19
+        }
+    }}

@@ -56,21 +56,50 @@ if __name__ == '__main__':
                     filename = input("\nName of file?\n")
                     full_filename = full_path + filename
                     txids = write_json(full_filename, bdb, alice)
-                    print(f"\n Transaction Succesful!\n Transaction IDs: {txids}\n Thanks for using Authentikos...bye now!") 
-            activity_decision = input("\nWuld you like to search for something in BigChainDB? [yes (y) | no (n)]\n")
-            # enumerate while loop to keep searching if needed
-            if (activity_decision == "yes" or activity_decision == "y"):
-                keyword = input("\nEnter keyword to search by: \n")
-                retrieved_obj_list = find_asset(keyword)
-                if (len(retrieved_obj_list) == 0):
-                    print("\n Your search did not return any results!")
-                elif (len(retrieved_obj_list) > 0):
-                    print(f"\n Your search was successful: \n {retrieved_obj_list}")         
-            elif (activity_decision == "no" or activity_decision == "n"):
-                print("\nThanks for using Authentikos...bye now!") 
+                    print(f"\n Transaction Succesful!\n Transaction IDs: {txids}\n Thanks for using Authentikos...bye now!")          
+            else:              
+                activity_decision = input("\nWould you like to search for something in BigChainDB? [yes (y) | no (n)]\n")
+                if (activity_decision == "yes" or activity_decision == "y"):
+                    keep_looping = True
+                    while (keep_looping == True):
+                        keyword = ""
+                        while (keyword == ""):
+                            keyword = input("\nEnter keyword to search by: \n")
+                            if (keyword == ""):
+                                print("\nKeyword cannot be a blank string! \nPlease enter something...\n")
+                        retrieved_obj_list = find_asset(keyword)
+                        if (len(retrieved_obj_list) == 0):
+                            print("\n Your search did not return any results!")
+                            repeat_search = input("\nWould you like to search again? [yes (y) | no (n)]\n")
+                            if (repeat_search == "no" or repeat_search == "n"):
+                                keep_looping = False
+                                print("\n Search session closed! Thanks for using Authentikos...bye now!") 
+                            elif (repeat_search == "yes" or repeat_search == "y"):
+                                keep_looping = True
+                            else:
+                                keep_looping = False
+                                print("\n No search decision! Thanks for using Authentikos...bye now!") 
+                                break   
+                        elif (len(retrieved_obj_list) > 0):
+                            print(f"\n Your search was successful: \n {retrieved_obj_list}")
+                            repeat_search = input("\nWould you like to search again? [yes (y) | no (n)]\n")
+                            if (repeat_search == "no" or repeat_search == "n"):
+                                keep_looping = False
+                                print("\n Search session closed! Thanks for using Authentikos...bye now!") 
+                            elif (repeat_search == "yes" or repeat_search == "y"):
+                                keep_looping = True
+                            else:
+                                print("\n No relevant search decision! Thanks for using Authentikos...bye now!") 
+                                break         
+                elif (activity_decision == "no" or activity_decision == "n"):
+                    print("\nThanks for using Authentikos...bye now!") 
+                else:
+                    print("\n No search decision! Thanks for using Authentikos...bye now!") 
         elif (keypair_choice == "no" or keypair_choice == "n"):
             print("\nThanks for using Authentikos...bye now!") 
+        else:
+            print("\n No keypair generation decision! Thanks for using Authentikos...bye now!") 
     elif (connection_choice == "no" or connection_choice == "n"):
         print("\nThanks for using Authentikos...bye now!") 
-
-
+    else:
+        print("\n No connection decision! Thanks for using Authentikos...bye now!") 
