@@ -11,9 +11,10 @@ sudo pip3 install bigchaindb-driver
 sudo pip3 install dataparser
 sudo pip3 install flask
 sudo pip3 install inquirer
-
+sudo pip3 install ipfshttpclient
 sudo pip3 install pyOpenSSL
 sudo pip3 install pywallet
+sudo pip3 install siaskynet
 sudo pip3 install tinydb
 sudo pip3 install web3
 sudo pip3 install wtforms

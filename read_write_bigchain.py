@@ -32,13 +32,13 @@ def find_asset(search_term):
     return retrieved_object
 
 def write_data(bdb, alice):
-    import_choice = input("\nWould you like to write data to BigChainDB from a json file? [yes (y) | no (n)]\n")
+    import_choice = input("\nWould you like to write data to BigChainDB from a json .txt file? [yes (y) | no (n)]\n")
     if (import_choice == "yes" or import_choice == "y"):
-        same_dir_choice = input("\nIs your .json file in the same directory as this script?[yes (y) | no (n)]\n")
+        same_dir_choice = input("\nIs your json .txt file in the same directory as this script?[yes (y) | no (n)]\n")
         if (same_dir_choice == "yes" or same_dir_choice == "y"):
             filename = ""
             while (filename == ""):
-                filename = input("\nName of file?\n")
+                filename = input("\nName of file including extenstion (e.g. auth.txt):\n")
                 if(filename == ""):
                     print("\nFilename cannot be a blank string! \nPlease enter a filename...\n")
             txids = write_json(filename, bdb, alice)
@@ -51,7 +51,7 @@ def write_data(bdb, alice):
                     print("\nPath cannot be a blank string! \nPlease enter full path directory...\n")
             filename = ""
             while (filename == ""):
-                filename = input("\nName of file?\n")
+                filename = input("\nName of file including extenstion (e.g. auth.txt):\n")
                 if(filename == ""):
                     print("\nFilename cannot be a blank string! \nPlease enter a filename...\n")
             full_filename = full_path + filename
@@ -99,14 +99,14 @@ def write_data(bdb, alice):
             print("\n No search decision! Thanks for using Authentikos...bye now!") 
 
 if __name__ == '__main__':
-    connection_choice = input("\nWelcome to Authentikos! \nWhat would you like to connect BigChainDB? [yes (y) | no (n)] \n")
+    connection_choice = input("\nWelcome to Authentikos! \nWould you like to connect BigChainDB? [yes (y) | no (n)] \n")
     if (connection_choice == "yes" or connection_choice == "y"):
         print("\nconnecting to bigchaindb...")
         bdb = connect_db()
         print(f"\nConnection Successful! \n {bdb}")
-        keypair_choice = input("\nWuld you like to gemerate a BigChainDB keypair? [yes (y) | no (n)]\n")
+        keypair_choice = input("\nWould you like to generate a BigChainDB keypair? [yes (y) | no (n)]\n")
         if (keypair_choice == "yes" or keypair_choice == "y"):
-            print("\ngenerating keys...")
+            print("\nGenerating keys...")
             alice = generate_key()
             print(f"\nYour public key is: {alice.public_key}")
             print(f"\nYour private key is: {alice.private_key}")           

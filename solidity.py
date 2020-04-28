@@ -1,5 +1,5 @@
 from web3 import Web3, HTTPProvider
-import binascii, contract_abi, inquirer, json, pprint, subprocess, sys, time
+import binascii, contract_abi, hashlib, inquirer, json, pprint, subprocess, sys, time
 
 def get_chain_id(network):
     with open('network_ids.json') as json_file: # Opening JSON file
@@ -11,16 +11,16 @@ def get_chain_id(network):
 def setup():
     '''sets up connection to solidity smart contract'''
     network = input("Enter blockchain network: \n") or "Rinkeby"
-    print(network)
+    print(network + "\n")
     chain_id = get_chain_id(network)
     contract_address = input("Enter smart contract address: \n") or "0xC3737aF68f5471a2607C996525993a8E9AF1862F"
-    print(contract_address)
+    print(contract_address + "\n")
     wallet_address = input("Enter your wallet address: \n") or "0xC7AC16DD7b42EeEc39Ee088a8702883e073D782e"
-    print(wallet_address)
+    print(wallet_address + "\n")
     wallet_private_key = input("Enter your private key: \n") or "6065a6bd9ccc0d11fd2ffb2111e68519df26b8294489cdc45fd748dd4a4f094b"
-    print(wallet_private_key)
+    print(wallet_private_key + "\n")
     infura_key = input("Enter your infura api key: \n") or "6c7e9aed2af146138cc7ef1986d9b558"
-    print(infura_key)
+    print(infura_key + "\n")
     websockets_rinkeby = "wss://rinkeby.infura.io/ws/v3/" + infura_key
     ws3 = Web3(Web3.WebsocketProvider(websockets_rinkeby, websocket_kwargs={'timeout': 60}))
     https_rinkeby = "https://rinkeby.infura.io/v3/" + infura_key
@@ -53,16 +53,38 @@ def execute_function(chosen_function):
         params = chosen_function[chosen_function.find('(')+1 : chosen_function.find(')')]
         arguments = params.split(',')
         number_of_args = len(arguments)
-        if 'address' in arguments:
-            address_at_index = arguments.index("address")
-            # check for address syntax of ethereum
         user_inputs = []
         for x in range(1, number_of_args + 1):
-            user_inputs.append(input(f"Please enter Parameter {x}: "))
-        txn_details = {'chainId': chain_id, 'gas': 140000, 'gasPrice': w3.toWei('40', 'gwei'), 'nonce': nonce}
+            if (x == 1):
+                news_agency_str = input("\nEnter news agency url [string]\n")
+                encoded_str = news_agency_str.encode('utf-8')
+                new_agency_checksum = hashlib.md5(encoded_str)
+                checksum_hash = new_agency_checksum.hexdigest()
+                print(f"\nNews agency url {news_agency_str} checksummed to {checksum_hash}\n")
+                user_inputs.append(checksum_hash)
+            elif (x == 2):
+                incorrect_addr_format = False
+                while (incorrect_addr_format == False):
+                    eth_addr = input("\nEnter agency ethereum address [hexadecimal]\n") or "0x0000000000000000000000000000000000000000"
+                    print(f"\nEthereum address {eth_addr} paired to {news_agency_str}\n")
+                    incorrect_addr_format = w3.isChecksumAddress(eth_addr)
+                    if (incorrect_addr_format == False):
+                        print("\nEthereum Address not valid. Please try again...\n")
+                    else:
+                        user_inputs.append(eth_addr)
+                        break
+        out_of_gas = True                  
+        while (out_of_gas == True):
+            gas_choice = input("\nWhat gas limit would you like to set? (min. 150100) \n") or 150100 
+            gas_choice = int(gas_choice) 
+            if(gas_choice < 150100):
+                print(f"\nGas limit of {gas_choice} set too low! Please increase it...\n")
+            else:
+                out_of_gas = False   
+        txn_details = {'chainId': chain_id, 'gas': gas_choice, 'gasPrice': w3.toWei('40', 'gwei'), 'nonce': nonce}
         chosen_method = chosen_function.split('(')[0]
         setter = \
-        '''contract.functions.''' + chosen_method + '("' + user_inputs[0] + '", "' + user_inputs[1] + '")' + '''.buildTransaction(''' + str(txn_details) + ')'
+        '''contract.functions.''' + chosen_method + '("' + str(user_inputs[0]) + '", "' + str(user_inputs[1]) + '")' + '''.buildTransaction(''' + str(txn_details) + ')'
         txn_dict = eval(setter)
         signed_setter = \
         '''(w3.eth.account.signTransaction(''' + str(txn_dict) + ', private_key = "' + wallet_private_key + '")).rawTransaction'
