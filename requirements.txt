@@ -118,7 +118,7 @@ readchar==2.0.1
 regex==2020.4.4
 reportlab==3.5.34
 repoze.lru==0.7
-requests==2.11.1
+requests==2.20.0
 requests-unixsocket==0.2.0
 rlp==1.2.0
 SecretStorage==2.3.1
