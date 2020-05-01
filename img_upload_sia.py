@@ -1,11 +1,15 @@
 from siaskynet import Skynet
 import webbrowser
 
-
 def browser_open(url):
-    browser_choice = input("\nWould you like to open in browser? [yes (y) | no (n)]")
+    browser_choice = input("\nWould you like to open in browser? [yes (y) | no (n)]\n")
     if (browser_choice == "yes" or browser_choice == "y"):
-        webbrowser.open(url, new=1)
+        open_type = input("\nNew window (1) or New tab (2)? \n")
+        webbrowser.open(url, new = int(open_type))
+    elif (browser_choice == "no" or browser_choice == "n"):
+        print("\n Not opened in browser! Thanks for using Authentikos!\n")
+    else:
+        print("\n No browser decision! Thanks for using Authentikos!\n")
 
 def upload_skynet(filename):
     print("\nUploading to skynet...\n")
@@ -42,8 +46,6 @@ def write_data():
     else:
         print(f"\nNo directory information! Thanks for using Authentikos...bye now!")       
     
-
-
 if __name__ == '__main__':
     upload_continue = True
     while (upload_continue == True):
@@ -58,5 +60,3 @@ if __name__ == '__main__':
         else:
             upload_continue = False
             print(f"\n No upload decision! Thanks for using Authentikos...bye now!\n") 
-
-    

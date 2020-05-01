@@ -1,0 +1,22 @@
+{    "c0a5f5c6933b6e6363ed5feb079255c9": {
+        "ratings_dict": {
+            "classifier": "mainstream",
+            "democratic_familiarity": 0.47,
+            "democratic_trust": 0.43,
+            "fact_check_rating": 0.06,
+            "news_agency": "latimes.com",
+            "republican_familiarity": 0.38,
+            "republican_trust": 0.22
+        },
+        "ssl_details": {
+            "common_name": "latimes.com",
+            "issuer": "Amazon",
+            "not_after": "2020-06-29 12:00:00",
+            "not_before": "2019-05-29 00:00:00",
+            "peer_name": ["34.216.117.150", 443],
+            "san": ["andrew.carnegie.mellony
+"],
+            "valid_cert": true
+        }
+    }
+}

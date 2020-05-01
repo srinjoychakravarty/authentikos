@@ -11,7 +11,7 @@ def generate_key():
     alice = generate_keypair()
     return alice
 
-def write_json(filename, bdb, alice):
+def write_json(filename, bdb, alice_pub_key, alice_priv_key):
     with open(filename) as json_file:
         data = json.load(json_file)
         txids = []
@@ -19,8 +19,8 @@ def write_json(filename, bdb, alice):
             news_asset = {'data': {'news_agency_asset': {key: value}}}
             print(news_asset)
             metadata_checksum = {'checksum': key}
-            prepared_creation_tx = bdb.transactions.prepare(operation = 'CREATE', signers = alice.public_key, asset = news_asset, metadata = metadata_checksum)
-            fulfilled_creation_tx = bdb.transactions.fulfill(prepared_creation_tx, private_keys = alice.private_key)
+            prepared_creation_tx = bdb.transactions.prepare(operation = 'CREATE', signers = alice_pub_key, asset = news_asset, metadata = metadata_checksum)
+            fulfilled_creation_tx = bdb.transactions.fulfill(prepared_creation_tx, private_keys = alice_priv_key)
             sent_creation_tx = bdb.transactions.send_commit(fulfilled_creation_tx)
             time.sleep(1)
             txid = sent_creation_tx['id']
@@ -31,7 +31,7 @@ def find_asset(search_term):
     retrieved_object = bdb.assets.get(search = search_term)
     return retrieved_object
 
-def write_data(bdb, alice):
+def write_data(bdb, alice_pub_key, alice_priv_key):
     import_choice = input("\nWould you like to write data to BigChainDB from a json .txt file? [yes (y) | no (n)]\n")
     if (import_choice == "yes" or import_choice == "y"):
         same_dir_choice = input("\nIs your json .txt file in the same directory as this script?[yes (y) | no (n)]\n")
@@ -41,7 +41,7 @@ def write_data(bdb, alice):
                 filename = input("\nName of file including extenstion (e.g. auth.txt):\n")
                 if(filename == ""):
                     print("\nFilename cannot be a blank string! \nPlease enter a filename...\n")
-            txids = write_json(filename, bdb, alice)
+            txids = write_json(filename, bdb, alice_pub_key, alice_priv_key)
             print(f"\n Transaction Succesful!\n Transaction IDs: {txids}\n Thanks for using Authentikos...bye now!") 
         elif (same_dir_choice == "no" or same_dir_choice == "n"):
             full_path = ""
@@ -55,7 +55,7 @@ def write_data(bdb, alice):
                 if(filename == ""):
                     print("\nFilename cannot be a blank string! \nPlease enter a filename...\n")
             full_filename = full_path + filename
-            txids = write_json(full_filename, bdb, alice)
+            txids = write_json(full_filename, bdb, alice_pub_key, alice_priv_key)
             print(f"\n Transaction Succesful!\n Transaction IDs: {txids}\n Thanks for using Authentikos...bye now!") 
         else:
             print(f"\n No directory information! Thanks for using Authentikos...bye now!")         
@@ -108,15 +108,19 @@ if __name__ == '__main__':
         if (keypair_choice == "yes" or keypair_choice == "y"):
             print("\nGenerating keys...")
             alice = generate_key()
-            print(f"\nYour public key is: {alice.public_key}")
-            print(f"\nYour private key is: {alice.private_key}")           
-            write_data(bdb, alice)
+            alice_pub_key = alice.public_key
+            alice_priv_key = alice.private_key
+            print(f"\nYour public key is: {alice_pub_key}")
+            print(f"\nYour private key is: {alice_priv_key}")           
+            write_data(bdb, alice_pub_key, alice_priv_key)
         elif (keypair_choice == "no" or keypair_choice == "n"):
             import_decision = input("\nWould you like to import your own BigChainDB private key? [yes (y) | no (n)]\n")
             if(import_decision == "yes" or import_decision == "y"):
-                alice = input("\nType in or Copy/Paste in your private key: \n") or "CCupfJjW4gcve67Tz76qAUyniw55pBAGpbn7wR9iAXTZ"
-                print(f"\n Activated Private Key: {alice}\n")
-                write_data(bdb, alice)
+                priv_key = input("\nType in or Copy/Paste in your private key: \n") or "5VUfU5Ly7f2SQhN2M44EDWMmEfsjcVUB4Nc6TiQdBsvJ"
+                print(f"\n Activated Private Key: {priv_key}\n")
+                pub_key = input("\nType in or Copy/Paste in your public key: \n") or "BmRiJ98hkKmB4HgKLaTMVVYKwu3JVnfqrwbTfXuEtQev"
+                print(f"\n Activated Public Key: {pub_key}\n")
+                write_data(bdb, pub_key, priv_key)
             elif(import_decision == "no" or import_decision == "n"):
                 print("\n Sorry! BigChainDB requires a private key to be imported or generated! Thanks for using Authentikos...bye now!") 
             else:

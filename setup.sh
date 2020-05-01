@@ -10,14 +10,28 @@ sudo apt-get install python3-pip -y
 sudo pip3 install bigchaindb-driver
 sudo pip3 install dataparser
 sudo pip3 install flask
+sudo pip3 install googletrans
 sudo pip3 install inquirer
 sudo pip3 install ipfshttpclient
 sudo pip3 install pyOpenSSL
 sudo pip3 install pywallet
+sudo pip3 install selenium
 sudo pip3 install siaskynet
 sudo pip3 install tinydb
 sudo pip3 install web3
 sudo pip3 install wtforms
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
+sudo rm -rf chromedriver_linux64.zip
+sudo mv chromedriver /usr/bin/chromedriver
+sudo chown root:root /usr/bin/chromedriver
+sudo chmod +x /usr/bin/chromedriver
+
+
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y

@@ -19,7 +19,7 @@ contract Authentikos {
     uint16 private agencyCount;
 
     modifier onlyOwner() {
-      require(msg.sender == contractOwner);
+      require(msg.sender == contractOwner, "Only contract owner can call this function");
       _;
     }
 
@@ -36,7 +36,7 @@ contract Authentikos {
     function setAgency(string _checksum, address _ethIdentity) public onlyOwner {
         var agency = agencies[_checksum];
         bool isNew = agency.exists;
-        require(isNew == false);
+        require(isNew == false, "News agency domain already registered");
         agency.ethIdentity = _ethIdentity;
         agency.exists = true;
         agencyCount += 1;

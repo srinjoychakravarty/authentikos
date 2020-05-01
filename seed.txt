@@ -1,0 +1,21 @@
+{    "8987639e553b5e1558cc939f41071d27": {
+        "ratings_dict": {
+            "classifier": "fakenews",
+            "democratic_familiarity": 0.07,
+            "democratic_trust": 0.2,
+            "fact_check_rating": "0.93",
+            "news_agency": "northeastern.com",
+            "republican_familiarity": 0.07,
+            "republican_trust": 0.15
+        },
+        "ssl_details": {
+            "common_name": "sni.cloudflaressl.com",
+            "issuer": "CloudFlare Inc ECC CA-2",
+            "not_after": "2020-08-22 12:00:00",
+            "not_before": "2019-08-23 00:00:00",
+            "peer_name": ["104.27.183.199", 443],
+            "san": ["northeastern.com"],
+            "valid_cert": true
+        }
+    } 
+}

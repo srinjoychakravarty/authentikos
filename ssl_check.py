@@ -4,7 +4,7 @@ from cryptography.x509.oid import NameOID
 from OpenSSL import SSL
 from socket import socket
 from tinydb import TinyDB, Query, where
-import concurrent.futures, dateparser, datetime, hashlib, idna, json, os
+import concurrent.futures, dateparser, datetime, hashlib, idna, json, os, time
 
 def get_certificate(hostname, port):
     hostname_idna = idna.encode(hostname)
@@ -62,6 +62,7 @@ if __name__ == '__main__':
     news_agencies = []
     outer_dict = {}
     for entity in db.search(where('news_agency')):
+        time.sleep(3)
         current_agency = entity.get('news_agency')
         print(current_agency)
         ratings_dict = dict(entity)
@@ -70,12 +71,14 @@ if __name__ == '__main__':
         try:
             ssl_details = check_it_out(current_agency, 443)
             inner_dict = {checksum: {'ratings_dict': ratings_dict, 'ssl_details': ssl_details}}
+            print(inner_dict)
             outer_dict.update(inner_dict)
         except:
             inner_dict = {checksum: {'ratings_dict': ratings_dict}}
+            print(inner_dict)
             outer_dict.update(inner_dict)
             pass
     print(outer_dict)
     print(len(outer_dict.keys()))
-    with open('authentikos.txt', 'w') as fp:
-        json.dump(outer_dict, fp, indent=4, sort_keys = True, default = str)
+    # with open('authentikos.txt', 'w') as fp:
+    #     json.dump(outer_dict, fp, indent=4, sort_keys = True, default = str)

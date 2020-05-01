@@ -17,11 +17,11 @@ def populate_checksums(contract, wallet_address, wallet_private_key):
             nonce = w3.eth.getTransactionCount(wallet_address)
             print(nonce)
             eth_addr = str(w3.eth.account.create().address)
-            txn_dict = contract.functions.setAgency(checksum_key, eth_addr).buildTransaction({'chainId': 4, 'gas': 140000, 'gasPrice': w3.toWei('40', 'gwei'), 'nonce': nonce})
+            txn_dict = contract.functions.setAgency(checksum_key, eth_addr).buildTransaction({'chainId': 4, 'gas': 90000, 'gasPrice': w3.toWei('40', 'gwei'), 'nonce': nonce})
             signed_txn = w3.eth.account.signTransaction(txn_dict, private_key = wallet_private_key)
             txn_hash = (w3.eth.sendRawTransaction(signed_txn.rawTransaction)).hex()
             print(txn_hash)
-            time.sleep(20)
+            time.sleep(13)
 
 if __name__ == '__main__':
     infura_key = "6c7e9aed2af146138cc7ef1986d9b558"
