@@ -104,11 +104,16 @@ if __name__ == '__main__':
     loop_again = True
     while (loop_again == True):
         all_functions = list_functions(contract)
+        bonus_function = "getLastAgency() "
+        all_functions.append(bonus_function)
         chosen_function = enumerate_functions(all_functions)
-        output = execute_function(chosen_function)
-        print(output)
-        choice = input("\nWould you like to quit? (yes [y] | no [n]) \n")
-        if (choice == "yes" or choice == "y" or choice == "exit" or choice == "q" or choice == "quit"):
-            loop_again = False
-            print("\nThanks for using Authentikos...bye now!") # Print a message that we are all finished.
+        if (chosen_function == "getLastAgency()"):
+            print("i got in bob")
+        else:
+            output = execute_function(chosen_function)
+            print(output)
+            choice = input("\nWould you like to quit? (yes [y] | no [n]) \n")
+            if (choice == "yes" or choice == "y" or choice == "exit" or choice == "q" or choice == "quit"):
+                loop_again = False
+                print("\nThanks for using Authentikos...bye now!") # Print a message that we are all finished.
             

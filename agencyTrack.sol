@@ -12,8 +12,14 @@ contract Authentikos {
         bool exists;
     }
 
+    struct Article {
+        string agencyChecksum;
+        string contentHash;
+    }
+
     address private contractOwner;
     mapping (string => Agency) agencies;
+    mapping (string => Article) articles;
     using strings for *;
     string private agencyStrings;
     uint16 private agencyCount;

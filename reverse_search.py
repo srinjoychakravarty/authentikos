@@ -29,6 +29,6 @@ def yandex_gen(img_to_upload):
     return (translated_tags)
 
 if __name__ == '__main__':
-    img_to_upload = 'zug.jpg'
+    img_to_upload = 'stove.jpg'
     translated_tags = yandex_gen(img_to_upload)
     print(translated_tags)
