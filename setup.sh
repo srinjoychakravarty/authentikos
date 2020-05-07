@@ -1,12 +1,12 @@
 #!/bin/bash
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
 sudo apt install linux-headers-$(uname -r) build-essential dkms -y
 sudo apt install software-properties-common apt-transport-https wget -y
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo apt install code -y
+
 sudo apt install curl -y
 sudo apt install git -y
-sudo apt-get install python3-pip -y
+
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
@@ -20,14 +20,14 @@ sudo chmod +x /usr/bin/chromedriver
 
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+sudo apt install apt-transport-https ca-certificates software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-sudo apt update
-sudo apt upgrade
-sudo apt dist-upgrade
+
 sudo apt-cache policy docker-ce
-sudo apt install docker-ce -y 
+sudo apt install docker-ce -y
+
+
 sudo apt-get install make -y
 
 sudo git clone https://github.com/bigchaindb/bigchaindb.git
