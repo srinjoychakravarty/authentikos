@@ -83,142 +83,23 @@ _Skip to step 7_
 ###### (Debian-based Hosts or VMs i.e. _Zorin, Ubuntu, LXLE, Lubuntu etc._)
 7. Open a new terminal window (Ctrl + Alt + T)
 
-8. Install all required Linux kernel headers
-    ```sh
-    $ sudo apt install linux-headers-$(uname -r) -y
-    ```
-9.  Install packages needed for building general software
-    ```sh
-    $ sudo apt install build-essential -y
-    ```
-10. Download package information from all configured sources
-    ```sh
-    $ sudo apt-get update -y
-    ```
-11. Install available upgrades to all currently installed packages
-    ```sh
-    $ sudo apt-get upgrade -y
-    ```
-12. Intelligently resolves install / removal system package conflicts
-    ```sh
-    $ sudo apt-get dist-upgrade -y
-    ```
-13. Removes & purges orphaned packages no longer needed
-    ```sh
-    $ sudo apt-get autoremove --purge -y
-    ```
-14. Cleans obsolete debian packages
-    ```sh
-    $ sudo apt-get autoclean -y
-    ```
-15. Install common linux files required by Authentikos
-    ```sh
-    $ sudo apt install software-properties-common -y
-    ```
-16. Install git versioning tool for Github
+8. Install git versioning tool for Github
     ```sh
     $ sudo apt install git -y
     ```
-17. Required to download remote programs recursively    
-    ```sh
-    $ sudo apt install wget -y
-    ```
-18. Install curl to test connections to remote code repositories
-    ```sh
-    $ sudo apt install curl -y
-    ```
-19. Install support for client-server authentication with certificates
-    ```sh
-    $ sudo apt install apt-transport-https -y
-    ```
-20. Install certificate authorities to allow applications to check for SSL authencity
-    ```sh
-    $ sudo apt install ca-certificates -y
-    ```
-21. Compiles C code from source
-    ```sh
-    $ sudo apt-get install make -y
-    ```
-22. Install package manager for Python3
-    ```sh
-    $ sudo apt-get install python3-pip -y
-    ```
-23. Install google chrome to use as browser for automation
-    ```sh
-    $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    ```
-    ```sh
-    $ sudo apt install ./google-chrome-stable_current_amd64.deb -y
-    ```
-24. Install chromedriver to automate selenium scripts
-    ```sh
-    $ wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
-    ```
-    ```sh
-    $ unzip chromedriver_linux64.zip
-    ```
-    ```sh
-    $ sudo rm -rf chromedriver_linux64.zip
-    ```
-    ```sh
-    $ sudo mv chromedriver /usr/bin/chromedriver
-    ```
-    ```sh
-    $ sudo chown root:root /usr/bin/chromedriver
-    ```
-    ```sh
-    $ sudo chmod +x /usr/bin/chromedriver
-    ```
-25. Install docker and docker-compose to run multi-container byzantine-fault tolerant, distributed database instance of BigChainDB; including its MongoDB base & Tendermint consensus layer
-    ```sh
-    $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-    ```
-    ```sh
-    $ sudo chmod +x /usr/local/bin/docker-compose 
-    ```
-    ```sh
-    $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    ```
-    ```sh
-    $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-    ```
-    ```sh
-    $ sudo apt-cache policy docker-ce
-    ```
-    ```sh
-    $ sudo apt install docker-ce -y 
-    ```
-26. Clone and run the BigChainDB repository
-    ```sh
-    $ sudo git clone https://github.com/bigchaindb/bigchaindb.git
-    ```
-    ```sh
-    cd bigchaindb
-     ```
-     ```sh
-     $ sudo make run
-     ```
-27. Open a new terminal window (Ctrl + Alt + T)
-
-28. Install the ability to allow virtual python packages
+9. Clone this Authentikos repository
    ```sh
-   $ sudo apt-get install python3-venv -y
-   ``` 
-29. Clone the Authentikos repository
+   $ git clone https://github.com/srinjoychakravarty/authentikos.git
+   ```
+10. Move into the Authentikos repository and make the setup script executable
+   ```sh
+   $ cd authentikos
+   ```
+   ```sh
+   $ sudo chmod +x setup.sh
+   ```
+
+8. Run the setup to install all the software prerequisites for Authentikos
     ```sh
-    $ git clone https://github.com/schaxz/authentikos.git
-    ```
-    ```sh
-    $ cd authentikos
-    ```
-30. Create and activate Python Virtual Environment
-    ```sh
-    $ python3 -m venv env
-    ```
-    ```sh
-    $ source env/bin/activate
-    ```
-31. Install all Authentikos python3 package dependencies
-    ```sh
-    (env) $ sudo pip3 install -r requirements.txt
+    $ sudo ./setup.sh
     ```
