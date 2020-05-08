@@ -98,8 +98,7 @@ _Skip to step 7_
    ```sh
    $ sudo chmod +x setup.sh
    ```
-
-8. Run the setup to install all the software prerequisites for Authentikos
+11. Run the setup to install all the software prerequisites for Authentikos
     ```sh
     $ sudo ./setup.sh
     ```
