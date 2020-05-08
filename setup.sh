@@ -1,7 +1,9 @@
 #!/bin/bash
-echo "This script is about to run another script."
+
 sudo chmod +x apt_bdb.sh
 sudo chmod +x venv_pip.sh
-echo "This script has just run another script."
-gnome-terminal -e sh ./apt_bdb.sh
-gnome-terminal -e sh ./venv_pip.sh 
+echo "Installing all python3 prerequisites and bigchaindb for Authentikos..."
+x-terminal-emulator -e bash ./apt_bdb.sh
+return
+echo "Installing required pip3 packages for Authentikos..."
+x-terminal-emulator -e bash ./venv_pip.sh 
