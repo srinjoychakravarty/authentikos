@@ -31,4 +31,4 @@ sudo apt-cache policy docker-ce
 sudo apt install docker-ce -y
 sudo git clone https://github.com/bigchaindb/bigchaindb.git
 cd bigchaindb
-sudo make run
+sudo nohup make run &
