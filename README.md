@@ -78,9 +78,7 @@ _Skip to step 7_
 5. Install VirtualBox [Guest Additions](https://helpdeskgeek.com/linux-tips/install-virtualbox-guest-additions-in-ubuntu/)
 
 6. Reboot your Virtual Machine
-    ```sh
-    $ sudo reboot
-    ```
+
 ##### For all Operating Systems  
 ###### (Debian-based Hosts or VMs i.e. _Zorin, Ubuntu, LXLE, Lubuntu etc._)
 7. Open a new terminal window (Ctrl + Alt + T)
