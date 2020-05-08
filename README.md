@@ -202,7 +202,7 @@ _Skip to step 7_
 
 28. Install the ability to allow virtual python packages
    ```sh
-   $ sueosdo apt-get install python3-venv -y
+   $ sudo apt-get install python3-venv -y
    ``` 
 29. Clone the Authentikos repository
     ```sh
