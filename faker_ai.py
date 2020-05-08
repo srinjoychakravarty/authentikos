@@ -13,7 +13,7 @@ def label_article(url_choice):
     chrome_options.binary_location = CHROME_PATH
     driver = webdriver.Chrome(executable_path = CHROMEDRIVER_PATH, options = chrome_options)
     driver.get("https://www.fakerfact.org/")
-    driver.implicitly_wait(2) # delay ensures link loads
+    driver.implicitly_wait(3) # delay ensures link loads from cnn
     inputElement = driver.find_element_by_name("url")
     inputElement.send_keys(url_choice)
     inputElement.send_keys(Keys.ENTER)
