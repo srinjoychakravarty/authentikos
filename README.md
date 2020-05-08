@@ -148,7 +148,7 @@ _Skip to step 7_
     $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     ```
     ```sh
-    $ sudo apt install ./google-chrome-stable_current_amd64.deb
+    $ sudo apt install ./google-chrome-stable_current_amd64.deb -y
     ```
 24. Install chromedriver to automate selenium scripts
     ```sh
@@ -199,19 +199,26 @@ _Skip to step 7_
      $ sudo make run
      ```
 27. Open a new terminal window (Ctrl + Alt + T)
-28. Clone the Authentikos repository
+
+28. Install the ability to allow virtual python packages
+   ```sh
+   $ sueosdo apt-get install python3-venv -y
+   ``` 
+29. Clone the Authentikos repository
     ```sh
     $ git clone https://github.com/schaxz/authentikos.git
     ```
     ```sh
     $ cd authentikos
     ```
-29. Create and activate Python Virtual Environment
+30. Create and activate Python Virtual Environment
     ```sh
     $ python3 -m venv env
+    ```
+    ```sh
     $ source env/bin/activate
     ```
-30. Install all Authentikos python3 package dependencies
+31. Install all Authentikos python3 package dependencies
     ```sh
     (env) $ sudo pip3 install -r requirements.txt
     ```
