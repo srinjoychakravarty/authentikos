@@ -1,10 +1,24 @@
-# Authentikos
+# Welcome to Authentikos
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Authentikos is a Real-Time Global Disinformation Index. It is a python-based, tool-suite, that uses the power of Siacoin's SkyNet for distributed file storage and Byzantine Fault Tolerant BigChainDB as its distributed database. All Authentikos code is ledgered on Ethereum with the power of Solidity smart contracts.
+
+![INFO7500 17426 Cryptocurrency/Smart Contract SEC 03 Fall 2019 [BOS-2-TR]](https://i.ytimg.com/vi/ZFb01yTR9bA/maxresdefault.jpg)
+
+# How it works
+
+![Authentikos](https://s2.gifyu.com/images/demo_50.gif)
+
+
+## Prerequisites
+
+|                |Minimum               |Preferred                       |
+|----------------|----------------------|--------------------------------|
+|Node            |`'v10.x.x`            |'v10.15.0 for long term support'|
+|npm             |`"v6.x.x"`            |"v6.6.0"            |
 
 ### New Features
 
