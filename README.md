@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Authentikos is a python-based, tool-suite, that uses the power of Siacoin's SkyNet for distributed file storage and Byzantine Fault Tolerant BigChainDB as its distributed database. All Authentikos code is ledgered on Ethereum by the power of Solidity smart contracts.
+Authentikos is a python-based, tool-suite, that uses the power of Siacoin's SkyNet for distributed file storage and Byzantine Fault Tolerant BigChainDB as its distributed database. All Authentikos code is ledgered on Ethereum with the power of Solidity smart contracts.
 
 ### New Features
 
