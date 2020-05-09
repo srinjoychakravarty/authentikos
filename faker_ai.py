@@ -13,7 +13,7 @@ def label_article(url_choice):
     chrome_options.binary_location = CHROME_PATH
     driver = webdriver.Chrome(executable_path = CHROMEDRIVER_PATH, options = chrome_options)
     driver.get("https://www.fakerfact.org/")
-    driver.implicitly_wait(3) # delay ensures link loads from cnn
+    driver.implicitly_wait(4) # delay ensures link loads from cnn
     inputElement = driver.find_element_by_name("url")
     inputElement.send_keys(url_choice)
     inputElement.send_keys(Keys.ENTER)
@@ -46,7 +46,7 @@ if __name__ == '__main__':
         while (classify_continue == True):
             url_choice = ""
             while (url_choice == ""):
-                url_choice = input("\nEnter url of the news article you would like to classify\n(e.g. https://www.bbc.com/news/live/world-52539905):\n\n> ")
+                url_choice = input("\nEnter url of the news article you would like to classify\n(e.g. https://www.bbc.com/news/live/world-52539905):\n\n> ") or "https://www.huzlers.com/teen-sues-juul-claims-vaping-made-him-homosexual/"
                 if(url_choice == ""):
                     print("\nNews article url can't be a blank string!\n")
             label_article(url_choice)
