@@ -116,3 +116,13 @@ if __name__ == '__main__':
     metadata['Address'] = english_address
     pp = pprint.PrettyPrinter(indent = 4, width = 41)
     pp.pprint(metadata)
+    print(type(metadata))
+    download_choice = input("\nWould you like to download the image metadata as a .json file? [yes (y) | no (n)]\n")
+    if (download_choice == "yes" or download_choice == "y"):
+        filename = ""
+        while (filename == ""):
+            filename = input("\nWhat would you like to name the file? (e.g. stove_metadata.json):\n")
+            if(filename == ""):
+                print("\nFilename cannot be a blank string! \nPlease enter a filename...\n")
+        with open('person.txt', 'w') as json_file:
+            json.dump(person_dict, json_file)
