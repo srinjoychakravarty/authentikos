@@ -1,7 +1,7 @@
+from colorama import Fore
 from siaskynet import Skynet
 from PIL import Image
 import inquirer, webbrowser
-from colorama import Fore, Style
 
 def browser_open(url):
     browser_choice = input("\nWould you like to open in browser? [yes (y) | no (n)]\n")
@@ -59,6 +59,10 @@ def write_data():
     else:
         print(Fore.MAGENTA + f"\nNo directory information! Thanks for using Authentikos...bye now!" + Fore.RESET)
 
+def open_image(filename):
+    im = Image.open(r"./" + filename)
+    im.show()
+
 def read_data():
     skylink_url = ""
     while (skylink_url == ""):
@@ -77,13 +81,13 @@ def read_data():
     Skynet.download_file(filename, sia_id)
     print(f"Download successful and file saved as {filename}")
     image_open = input("\nWould you like to open the downloaded image? [yes (y) | no (n)] \n")
-    if (image_open == "yes" or upload_choice == "y"):
-        im = Image.open(r"./" + filename)
-        im.show()
-    elif (image_open == "no" or upload_choice == "n"):
+    if (image_open == "yes" or image_open == "y"):
+        open_image(filename)
+    elif (image_open == "no" or image_open == "n"):
         print(Fore.MAGENTA + f"\nNot displaying image right now? Thanks for using Authentikos...bye now!\n" + Fore.RESET)
     else:
         print(Fore.MAGENTA + f"\nNo image open decision! Thanks for using Authentikos...bye now!\n" + Fore.RESET)
+    return filename
 
 if __name__ == '__main__':
     question = [inquirer.List('action', message = "Welcome to Authentikos! What skynet action do you need?", choices = ['Upload', 'Download'])]
@@ -104,10 +108,10 @@ if __name__ == '__main__':
     elif (chosen_function == 'Download'):
         download_continue = True
         while (download_continue == True):
-            upload_choice = input("\nWould you like to download media from Skynet? [yes (y) | no (n)] \n")
-            if (upload_choice == "yes" or upload_choice == "y"):
-                read_data()
-            elif (upload_choice == "no" or upload_choice == "n"):
+            download_choice = input("\nWould you like to download media from Skynet? [yes (y) | no (n)] \n")
+            if (download_choice == "yes" or download_choice == "y"):
+                filename = read_data()
+            elif (download_choice == "no" or download_choice == "n"):
                 download_continue = False
                 print(Fore.MAGENTA + f"\nNot downloading right now? Thanks for using Authentikos...bye now!\n" + Fore.RESET)
             else:

@@ -1,8 +1,10 @@
+from colorama import Fore
 from geopy.geocoders import Here
 from googletrans import Translator
 from PIL import Image
 from PIL.ExifTags import GPSTAGS, TAGS
-import requests, pprint
+from skynet import read_data
+import inquirer, json, pprint, requests
 
 def get_exif(filename):
     image = Image.open(filename)
@@ -107,22 +109,91 @@ def print_output(photo):
     'ISOSpeedRating': isospeed}
     return dict
 
+def read_exif(filename):
+    try:
+        im = Image.open(filename)
+        metadata = print_output('img1')
+        foreign_address = metadata.get('Address')
+        translator = Translator()
+        translated = translator.translate(foreign_address)
+        english_address = translated.text
+        metadata['Address'] = english_address
+        pp = pprint.PrettyPrinter(indent = 4, width = 41)
+        pp.pprint(metadata)
+    except IOError:
+        print(Fore.MAGENTA + f"{filename} is not a valid image file" + Fore.RESET)
+        metadata = {}
+    return metadata
+
+def scrape_metadata():
+    question = [inquirer.List('action', message = "Where is your image stored", choices = ['Local', 'Skynet'])]
+    answer = inquirer.prompt(question)
+    chosen_function = answer['action']
+    if (chosen_function == 'Local'):
+        same_dir_choice = input("Is your image in the same directory as this script? [yes (y) | no (n)]\n")
+        if (same_dir_choice == "yes" or same_dir_choice == "y"):
+            filename = ""
+            while (filename == ""):
+                filename = input("\nName of file:\n")
+                if(filename == ""):
+                    print(Fore.MAGENTA + "\nFilename cannot be a blank string! \nPlease enter a filename...\n" + Fore.RESET)
+            exif_metadata = read_exif(filename)
+
+        elif (same_dir_choice == "no" or same_dir_choice == "n" + Fore.RESET):
+            full_path = ""
+            while (full_path == ""):
+                full_path = input("\nEnter full path to file ending in / (e.g /home/eos/images/ \n")
+                if(full_path == ""):
+                    print(Fore.MAGENTA + "\nPath cannot be a blank string! \nPlease enter full path directory...\n" + Fore.RESET)
+            filename = ""
+            while (filename == ""):
+                filename = input("\nName of file: (e.g. img1):\n")
+                if(filename == ""):
+                    print(Fore.MAGENTA + "\nFilename cannot be a blank string! \nPlease enter a filename...\n" + Fore.RESET)
+            full_filename = full_path + filename
+            exif_metadata = read_exif(full_filename)
+
+        else:
+            print(Fore.MAGENTA + f"\nNo directory information! Thanks for using Authentikos...bye now!" + Fore.RESET)
+
+    elif (chosen_function == 'Skynet'):
+        filename = read_data()
+        print("\n")
+        exif_metadata = read_exif(filename)
+    return exif_metadata
+
 if __name__ == '__main__':
-    metadata = print_output('stove.jpg')
-    foreign_address = metadata.get('Address')
-    translator = Translator()
-    translated = translator.translate(foreign_address)
-    english_address = translated.text
-    metadata['Address'] = english_address
-    pp = pprint.PrettyPrinter(indent = 4, width = 41)
-    pp.pprint(metadata)
-    print(type(metadata))
-    download_choice = input("\nWould you like to download the image metadata as a .json file? [yes (y) | no (n)]\n")
-    if (download_choice == "yes" or download_choice == "y"):
-        filename = ""
-        while (filename == ""):
-            filename = input("\nWhat would you like to name the file? (e.g. stove_metadata.json):\n")
-            if(filename == ""):
-                print("\nFilename cannot be a blank string! \nPlease enter a filename...\n")
-        with open('person.txt', 'w') as json_file:
-            json.dump(person_dict, json_file)
+    question = [inquirer.List('action', message = "Welcome to Authentikos! What skynet action do you need?", choices = ['Scrape Image Metadata', 'Download Metadata JSON'])]
+    answer = inquirer.prompt(question)
+    chosen_function = answer['action']
+    if (chosen_function == 'Scrape Image Metadata'):
+        scrape_continue = True
+        while (scrape_continue == True):
+            scrape_choice = input("\nWould you like to scrape exif metadata of an image? [yes (y) | no (n)]\n")
+            if (scrape_choice == "yes" or scrape_choice == "y"):
+                exif_metadata = scrape_metadata()
+            elif (scrape_choice == "no" or scrape_choice == "n"):
+                scrape_continue = False
+                print(Fore.MAGENTA + f"\nNot scraping metadata right now? Thanks for using Authentikos...bye now!\n" + Fore.RESET)
+            else:
+                upload_continue = False
+                print(Fore.MAGENTA + f"\nNo scrape decision! Thanks for using Authentikos...bye now!\n" + Fore.RESET)
+
+    elif (chosen_function == 'Download Metadata JSON'):
+        download_choice = input("\nWould you like to download the image metadata as a .json file? [yes (y) | no (n)]\n")
+        if (download_choice == "yes" or download_choice == "y"):
+            exif_metadata = scrape_metadata()
+            filename = ""
+            while (filename == ""):
+                filename = input("\nWhat would you like to name the file? (e.g. metadata1):\n")
+                if(filename == ""):
+                    print(Fore.MAGENTA + "\nFilename cannot be a blank string! Please enter a filename..." + Fore.RESET)
+            print(Fore.YELLOW + f"\nDownloading {filename} to disk...\n" + Fore.RESET)
+            with open(filename, 'w') as json_file:
+                json.dump(exif_metadata, json_file)
+
+        elif (download_choice == "no" or download_choice == "n"):
+            print(Fore.MAGENTA + f"\nNot downloading json right now? Thanks for using Authentikos...bye now!\n" + Fore.RESET)
+        else:
+            upload_continue = False
+            print(Fore.MAGENTA + f"\nNo json decision! Thanks for using Authentikos...bye now!\n" + Fore.RESET)
