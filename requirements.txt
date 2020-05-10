@@ -39,7 +39,7 @@ future==0.18.2
 geographiclib==1.50
 geopy==1.21.0
 googletrans==2.4.0
-grip
+grip==4.5.2
 hexbytes==0.2.0
 httplib2==0.14.0
 idna==2.8
@@ -100,6 +100,7 @@ pytest==5.4.1
 python-dateutil==2.7.3
 python-editor==1.0.4
 python-for-android==2020.3.30
+python-gnupg-0.4.6
 python-rapidjson==0.6.3
 python-rapidjson-schema==0.1.1
 pytoml==0.1.21
