@@ -6,7 +6,7 @@
 
 Authentikos is a Real-Time Global Disinformation Index. It is a python-based, tool-suite, that uses the power of Siacoin's SkyNet for distributed file storage and Byzantine Fault Tolerant BigChainDB as its distributed database. All Authentikos code is ledgered on Ethereum with the power of Solidity smart contracts.
 
-![Authentikos](/images/logo.png))
+![Authentikos](/images/logo.png)
 
 # How it works
 
