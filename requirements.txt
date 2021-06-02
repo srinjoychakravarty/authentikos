@@ -130,7 +130,7 @@ two1==3.10.9
 tzlocal==2.0.0
 ubuntu-drivers-common==0.0.0
 ufw==0.36
-urllib3==1.25.8
+urllib3==1.26.5
 varint==1.0.2
 virtualenv==16.7.10
 wadllib==1.3.3
